@@ -1,9 +1,17 @@
 Revision history for Task-BeLike-LESPEA
 
+
+1.11        08/21/2010 06:20:58 PM (CDT)
+    *   Add xt tests
+    *   Add light-weight examples folder
+    *   Don't include Dist::Zilla info in META files
+
+
 1.10        08/21/2010 04:24:21 PM (CDT)
     *   Add some Module::Install modules
     *   Add some Math modules
     *   Add a DateTime module
+
 
 1.00        08/21/2010 03:24:29 PM (CDT)
     *   First release of the module
