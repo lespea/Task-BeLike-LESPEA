@@ -5,7 +5,6 @@ use Modern::Perl;
 use autodie;
 use File::Spec;
 
-use constant  VERSION => 1.00;
 use constant  PATH    => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
 
 
@@ -37,24 +36,38 @@ my $pod_section = {
 
 
     'Dist::Zilla' => {
-        'Dist::Zilla'                            => q{Basic module},
-        'Dist::Zilla::App::Command::cover'       => q{Test your test coverage with Devel::Cover},
-        'Dist::Zilla::Plugin::CheckChangesTests' => q{Make sure you're versioning properly},
-        'Dist::Zilla::Plugin::CriticTests'       => q{Checks your code for current best practices},
-        'Dist::Zilla::Plugin::CompileTests'      => q{Ensures that the module(s) compile correctly},
-        'Dist::Zilla::Plugin::InstallGuide'      => q{Create an INSTALL file based on which build system you're using},
-        'Dist::Zilla::Plugin::MinimumPerl'       => q{Figures out which version of Perl is the minimum version required},
-        'Dist::Zilla::Plugin::PodWeaver'         => q{Dynamically creates POD documentation},
-        'Dist::Zilla::Plugin::PortabilityTests'  => q{Ensures your filenames will work cross-platform},
-        'Dist::Zilla::Plugin::Prepender'         => q{Adds a header to all your files (usefull small readme)},
-        'Dist::Zilla::Plugin::ReadmeFromPod'     => q{Creates a README file from the POD documentation},
-        'Dist::Zilla::Plugin::SynopsisTests'     => q{Makes sure the code in your SYNOPSIS passes a syntax check},
-        'Dist::Zilla::Plugin::UnusedVarsTests'   => q{Checks your program for any unused variables (probably a bug?)},
-        'Perl::MinimumVersion'                   => q{Helper module for dzil plugin},
-        'Perl::PrereqScanner'                    => q{Helper module for dzil plugin},
-        'Pod::Elemental'                         => q{Helper module for dzil plugin},
-        'Pod::Elemental::Transformer::List'      => q{Helper module for dzil plugin},
-        'Pod::Weaver'                            => q{Helper module for dzil plugin},
+        'Dist::Zilla'                                 => q{Basic module},
+        'Dist::Zilla::App::Command::cover'            => q{Test your test coverage with Devel::Cover},
+        'Dist::Zilla::Plugin::Bugtracker'             => q{Adds all the CPAN links to perldoc},
+        'Dist::Zilla::Plugin::CheckChangeLog'         => q{Make sure the changes file is up-to-date},
+        'Dist::Zilla::Plugin::CheckChangesHasContent' => q{Make sure the changes file actually has content},
+        'Dist::Zilla::Plugin::CheckChangesTests'      => q{Make sure you're versioning properly},
+        'Dist::Zilla::Plugin::CompileTests'           => q{Ensures that the module(s) compile correctly},
+        'Dist::Zilla::Plugin::CriticTests'            => q{Checks your code for current best practices},
+        'Dist::Zilla::Plugin::Git'                    => q{Used to check/sync with github},
+        'Dist::Zilla::Plugin::HasVersionTests'        => q{Make sure the modules have version info},
+        'Dist::Zilla::Plugin::InstallGuide'           => q{Create an INSTALL file based on which build system you're using},
+        'Dist::Zilla::Plugin::KwaliteeTests'          => q{General quality tests},
+        'Dist::Zilla::Plugin::MinimumPerl'            => q{Figures out which version of Perl is the minimum version required},
+        'Dist::Zilla::Plugin::MinimumVersionTests'    => q{Make sure the code works with provided versions},
+        'Dist::Zilla::Plugin::PodSpellingTests'       => q{Check spelling of perldoc},
+        'Dist::Zilla::Plugin::PodWeaver'              => q{Dynamically creates POD documentation},
+        'Dist::Zilla::Plugin::PortabilityTests'       => q{Ensures your filenames will work cross-platform},
+        'Dist::Zilla::Plugin::Prepender'              => q{Adds a header to all your files (usefull small readme)},
+        'Dist::Zilla::Plugin::ReadmeFromPod'          => q{Creates a README file from the POD documentation},
+        'Dist::Zilla::Plugin::ReadmeMarkdownFromPod'  => q{Create markdown from Readme},
+        'Dist::Zilla::Plugin::ReportVersions'         => q{List all the version of modules you're using},
+        'Dist::Zilla::Plugin::Repository'             => q{List github repo in perldoc},
+        'Dist::Zilla::Plugin::SynopsisTests'          => q{Makes sure the code in your SYNOPSIS passes a syntax check},
+        'Dist::Zilla::Plugin::UnusedVarsTests'        => q{Checks your program for any unused variables (probably a bug?)},
+        'Perl::MinimumVersion'                        => q{Helper module for dzil plugin},
+        'Perl::PrereqScanner'                         => q{Helper module for dzil plugin},
+        'Pod::Coverage::TrustPod'                     => q{Helper module for dzil plugin},
+        'Pod::Elemental::Transformer::List'           => q{Helper module for dzil plugin},
+        'Pod::Weaver'                                 => q{Helper module for dzil plugin},
+        'Pod::Weaver::Section::Support'               => q{Helper module for dzil plugin},
+        'Test::CPAN::Meta'                            => q{Helper module for dzil plugin},
+        'Test::Perl::Critic'                          => q{Helper module for dzil plugin},
     },
 
 
@@ -96,7 +109,8 @@ my $pod_section = {
         'MooseX::App::Cmd'           => q{Extend your moose object as a script},
         'MooseX::Method::Signatures' => q{Adds greate paramater varification to methods (with a performance price)},
         'MooseX::Types::Common'      => q{As it sounds, common types for Moose},
-        'MooseX::Types::DateTimeX'   => q{Awesome DateTime parser},
+        #  Currently very broken :(
+        #'MooseX::Types::DateTimeX'   => q{Awesome DateTime parser},
         'MooseX::Types::Structured'  => q{Lets you write enforce structured attributes better than base Moose},
     },
 
@@ -116,8 +130,9 @@ my $pod_section = {
         'Test::Perl::Critic'             => q{Follow best practices},
         'Test::Pod'                      => q{Ensures your POD compiles ok},
         'Test::Pod::Coverage'            => q{Make sure you document all of your functions},
-        'Perl::Critic::Utils::PPIRegexp' => q{Required for Perl::Critic::Bangs},
-        'Perl::Critic::Bangs'            => q{Extra tests that are usefull},
+        #  Just use normal Perl::Critic for now
+        #'Perl::Critic::Utils::PPIRegexp' => q{Required for Perl::Critic::Bangs},
+        #'Perl::Critic::Bangs'            => q{Extra tests that are usefull},
     },
 
 
@@ -147,32 +162,33 @@ use strict;
 
 package Task::BeLike::LESPEA;
 
+#ABSTRACT: Modules that LESPEA uses on a daily basis
+
 __END_START
 
 
 
-my ( $module_txt, $build_module_txt, @modules );
-my $max = 0;
+my ( $module_txt, @modules );
 for  my $section  (sort keys %$pod_section) {
     $module_txt .= sprintf( "\n=head2 %s\n\n", $section );
     my $module_ref = $pod_section->{ $section };
 
     for  my $module  (sort keys %$module_ref) {
         my $doc = $module_ref->{ $module };
-        $max    = length $module  if  length $module > $max;
 
         $module_txt .= sprintf( qq{=head3 L<%s>\n\n%s\n\n}, $module, $doc );
         push @modules, $module;
     }
 }
-$max += 2;
+
+$module_txt .= "=cut\n\n";
 
 for  my $module  (sort @modules) {
-    $build_module_txt .= sprintf( qq{        %-*s => 0,\n}, $max, qq{'$module'} );
+    $module_txt .= sprintf( qq{use %s;\n}, $module );
 }
 
 
-my $txt = join '', ( $begin_txt, $version_txt, $mid_txt, $module_txt, $end_txt );
+my $txt = join '', ( $begin_txt, $module_txt, "\n\n1;" );
 
 open  my $fh, '>', PATH;
 print $fh $txt;
