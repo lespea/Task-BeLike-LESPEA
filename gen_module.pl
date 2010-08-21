@@ -30,6 +30,11 @@ my $pod_section = {
     },
 
 
+    'Dates' => {
+        'DateTime::Format::DateParse' => q{Takes a string and makes a DateTime object out of it},
+    },
+
+
     'Development' => {
         'Devel::NYTProf' => q{Best profiler available! (by far)},
     },
@@ -90,9 +95,11 @@ my $pod_section = {
 
 
     'Installers' => {
-        'Exporter::Easy'  => q{Makes exporting functions a snap},
-        'Module::Build'   => q{Pure perl installer},
-        'Module::Install' => q{Extension of MakeMaker},
+        'Exporter::Easy'               => q{Makes exporting functions a snap},
+        'Module::Build'                => q{Pure perl installer},
+        'Module::Install'              => q{Extension of MakeMaker},
+        'Module::Install::AuthorTests' => q{Run author tests},
+        'Module::Install::ExtraTests'  => q{Run extra tests},
     },
 
 
@@ -100,6 +107,12 @@ my $pod_section = {
         'JSON'      => q{Basic perl module to parse JSON},
         'JSON::XS'  => q{Fast C module to parse JSON},
         'JSON::Any' => q{Auto use the best available JSON module},
+    },
+
+
+    'Math' => {
+        'Math::Big'          => q{Easily compute math with big ints},
+        'Math::Big::Factors' => q{Compute factors of a number},
     },
 
 

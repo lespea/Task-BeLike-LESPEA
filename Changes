@@ -1,4 +1,9 @@
 Revision history for Task-BeLike-LESPEA
 
-1.00    
-    *  First release of the module
+1.10        08/21/2010 04:24:21 PM (CDT)
+    *   Add some Module::Install modules
+    *   Add some Math modules
+    *   Add a DateTime module
+
+1.00        08/21/2010 03:24:29 PM (CDT)
+    *   First release of the module

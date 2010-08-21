@@ -47,6 +47,13 @@ Use Microsoft ODBC connections
 Base database handler
 
 
+=head2 Dates
+
+=head3 L<DateTime::Format::DateParse>
+
+Takes a string and makes a DateTime object out of it
+
+
 =head2 Development
 
 =head3 L<Devel::NYTProf>
@@ -232,6 +239,14 @@ Pure perl installer
 
 Extension of MakeMaker
 
+=head3 L<Module::Install::AuthorTests>
+
+Run author tests
+
+=head3 L<Module::Install::ExtraTests>
+
+Run extra tests
+
 
 =head2 JSON
 
@@ -246,6 +261,17 @@ Auto use the best available JSON module
 =head3 L<JSON::XS>
 
 Fast C module to parse JSON
+
+
+=head2 Math
+
+=head3 L<Math::Big>
+
+Easily compute math with big ints
+
+=head3 L<Math::Big::Factors>
+
+Compute factors of a number
 
 
 =head2 Moose
@@ -367,6 +393,7 @@ Fast C module to parse JSON
 use DBD::CSV;
 use DBD::ODBC;
 use DBI;
+use DateTime::Format::DateParse;
 use Devel::NYTProf;
 use Dist::Zilla;
 use Dist::Zilla::App::Command::cover;
@@ -403,8 +430,12 @@ use JSON;
 use JSON::Any;
 use JSON::XS;
 use List::MoreUtils;
+use Math::Big;
+use Math::Big::Factors;
 use Module::Build;
 use Module::Install;
+use Module::Install::AuthorTests;
+use Module::Install::ExtraTests;
 use Module::Starter;
 use Moose;
 use MooseX::App::Cmd;
