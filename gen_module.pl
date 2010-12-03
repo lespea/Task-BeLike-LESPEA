@@ -5,7 +5,9 @@ use Modern::Perl;
 use autodie;
 use File::Spec;
 
-use constant  PATH    => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
+use constant  PATH_Mod    => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
+use constant  PATH_Dist   => 'dist.ini';
+use constant  VERSION     => 1.12;
 
 
 #  Setup modules
@@ -72,7 +74,6 @@ my $pod_section = {
         'Pod::Weaver'                                 => q{Helper module for dzil plugin},
         'Pod::Weaver::Section::Support'               => q{Helper module for dzil plugin},
         'Test::CPAN::Meta'                            => q{Helper module for dzil plugin},
-        'Test::Perl::Critic'                          => q{Helper module for dzil plugin},
     },
 
 
@@ -196,13 +197,109 @@ for  my $section  (sort keys %$pod_section) {
 
 $module_txt .= "=cut\n\n";
 
-for  my $module  (sort @modules) {
-    $module_txt .= sprintf( qq{use %s;\n}, $module );
-}
+#for  my $module  (sort @modules) {
+#    $module_txt .= sprintf( qq{use %s;\n}, $module );
+#}
 
 
 my $txt = join '', ( $begin_txt, $module_txt, "\n\n1;" );
 
-open  my $fh, '>', PATH;
-print $fh $txt;
+open  my $fh, '>', PATH_Mod;
+print {$fh} $txt;
+close $fh;
+
+
+
+
+my $ini_txt = <<'__END_DIST__';
+;  Basic author info
+name    = Task-BeLike-LESPEA
+author  = Adam Lesperance <lespea@gmail.com>
+license = Perl_5
+version = %s
+
+copyright_holder = Adam Lesperance
+copyright_year   = 2010
+
+
+
+; -- fetch & generate files
+[GatherDir]
+;[CompileTests]
+[MinimumPerl]
+[CriticTests]
+[HasVersionTests]
+[MetaTests]
+[MinimumVersionTests]
+;[PodCoverageTests]
+;;[PodSpellingTests]
+[PodSyntaxTests]
+[PortabilityTests]
+;[SynopsisTests]
+;[UnusedVarsTests]
+;[ReadmeMarkdownFromPod]
+[ReadmeFromPod]
+[KwaliteeTests]
+[PerlTidy]
+
+
+; -- remove some files
+[PruneCruft]
+[ManifestSkip]
+
+; -- get prereqs
+[AutoPrereqs]
+[Prereqs]
+%s
+
+; -- munge files
+[ExtraTests]
+[PkgVersion]
+
+; -- dynamic meta-information
+[ExecDir]
+[ShareDir]
+[Bugtracker]
+[Repository]
+;[MetaConfig]
+
+; -- generate meta files
+[License]
+[ModuleBuild]
+[InstallGuide]
+[MetaYAML]
+[MetaJSON]
+[PodWeaver]
+[Manifest] ; should come last
+
+; -- release
+[CheckChangeLog]
+[CheckChangesTests]
+[CheckChangesHasContent]
+[Git::Check]
+[TestRelease]
+[ConfirmRelease]
+
+; releaser
+[UploadToCPAN]
+
+[Git::Tag]
+tag_format = release-%%v
+
+[Git::Commit / Commit_Changes]
+
+[Git::Push]
+push_to = origin
+__END_DIST__
+
+
+
+my $module_versions;
+for  my $module  (sort @modules) {
+    $module_versions .= sprintf( qq{%s = 0\n}, $module );
+}
+
+
+open  $fh, '>', PATH_Dist;
+printf {$fh} $ini_txt, VERSION, $module_versions;
 close $fh;

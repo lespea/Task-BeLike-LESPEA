@@ -1,5 +1,9 @@
 Revision history for Task-BeLike-LESPEA
 
+1.12        12/02/2010 09:29:28 PM (CST)
+    *   Use Prereqs instead of relying on Autoprereqs
+    *   Autoprereqs instead of Autoprereq
+
 
 1.11        08/21/2010 06:20:58 PM (CDT)
     *   Add xt tests

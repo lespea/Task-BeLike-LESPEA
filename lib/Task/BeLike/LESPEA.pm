@@ -187,10 +187,6 @@ Helper module for dzil plugin
 
 Helper module for dzil plugin
 
-=head3 L<Test::Perl::Critic>
-
-Helper module for dzil plugin
-
 
 =head2 Error Checking
 
@@ -390,89 +386,6 @@ Fast C module to parse JSON
 
 =cut
 
-use DBD::CSV;
-use DBD::ODBC;
-use DBI;
-use DateTime::Format::DateParse;
-use Devel::NYTProf;
-use Dist::Zilla;
-use Dist::Zilla::App::Command::cover;
-use Dist::Zilla::Plugin::Bugtracker;
-use Dist::Zilla::Plugin::CheckChangeLog;
-use Dist::Zilla::Plugin::CheckChangesHasContent;
-use Dist::Zilla::Plugin::CheckChangesTests;
-use Dist::Zilla::Plugin::CompileTests;
-use Dist::Zilla::Plugin::CriticTests;
-use Dist::Zilla::Plugin::Git;
-use Dist::Zilla::Plugin::HasVersionTests;
-use Dist::Zilla::Plugin::InstallGuide;
-use Dist::Zilla::Plugin::KwaliteeTests;
-use Dist::Zilla::Plugin::MinimumPerl;
-use Dist::Zilla::Plugin::MinimumVersionTests;
-use Dist::Zilla::Plugin::PodSpellingTests;
-use Dist::Zilla::Plugin::PodWeaver;
-use Dist::Zilla::Plugin::PortabilityTests;
-use Dist::Zilla::Plugin::Prepender;
-use Dist::Zilla::Plugin::ReadmeFromPod;
-use Dist::Zilla::Plugin::ReadmeMarkdownFromPod;
-use Dist::Zilla::Plugin::ReportVersions;
-use Dist::Zilla::Plugin::Repository;
-use Dist::Zilla::Plugin::SynopsisTests;
-use Dist::Zilla::Plugin::UnusedVarsTests;
-use Exporter::Easy;
-use File::HomeDir;
-use File::ShareDir;
-use File::Slurp;
-use Getopt::Long::Descriptive;
-use HTML::Tree;
-use HTML::TreeBuilder::XPath;
-use JSON;
-use JSON::Any;
-use JSON::XS;
-use List::MoreUtils;
-use Math::Big;
-use Math::Big::Factors;
-use Module::Build;
-use Module::Install;
-use Module::Install::AuthorTests;
-use Module::Install::ExtraTests;
-use Module::Starter;
-use Moose;
-use MooseX::App::Cmd;
-use MooseX::Method::Signatures;
-use MooseX::Types::Common;
-use MooseX::Types::Structured;
-use Net::CIDR::Lite;
-use Net::DNS;
-use Net::IP;
-use Net::Netmask;
-use Net::Ping;
-use Perl::Critic;
-use Perl::MinimumVersion;
-use Perl::PrereqScanner;
-use Pod::Coverage::TrustPod;
-use Pod::Elemental::Transformer::List;
-use Pod::Weaver;
-use Pod::Weaver::Section::Support;
-use Readonly::XS;
-use Regexp::Common;
-use Spreadsheet::ParseExcel;
-use Spreadsheet::Read;
-use Spreadsheet::WriteExcel;
-use Test::CPAN::Meta;
-use Test::Most;
-use Test::Perl::Critic;
-use Test::Perl::Critic;
-use Test::Pod;
-use Test::Pod::Coverage;
-use Text::CSV_XS;
-use Try::Tiny;
-use YAML;
-use YAML::Any;
-use YAML::Syck;
-use YAML::XS;
-use autodie;
-use namespace::autoclean;
 
 
 1;
