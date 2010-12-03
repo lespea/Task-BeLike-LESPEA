@@ -7,7 +7,7 @@ use File::Spec;
 
 use constant  PATH_Mod    => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
 use constant  PATH_Dist   => 'dist.ini';
-use constant  VERSION     => '1.200000';
+use constant  VERSION     => '1.200001';
 
 
 #  Setup modules
@@ -59,7 +59,6 @@ my $pod_section = {
         'Dist::Zilla::Plugin::KwaliteeTests'          => q{General quality tests},
         'Dist::Zilla::Plugin::MinimumPerl'            => q{Figures out which version of Perl is the minimum version required},
         'Dist::Zilla::Plugin::MinimumVersionTests'    => q{Make sure the code works with provided versions},
-        #'Dist::Zilla::Plugin::PodSpellingTests'       => q{Check spelling of perldoc},
         'Dist::Zilla::Plugin::PodWeaver'              => q{Dynamically creates POD documentation},
         'Dist::Zilla::Plugin::PortabilityTests'       => q{Ensures your filenames will work cross-platform},
         'Dist::Zilla::Plugin::Prepender'              => q{Adds a header to all your files (usefull small readme)},
@@ -186,12 +185,16 @@ for  my $section  (sort keys %$pod_section) {
     $module_txt .= sprintf( "=head2 %s\n\n", $section );
     my $module_ref = $pod_section->{ $section };
 
+    $module_txt .= "=for :list\n";
+
     for  my $module  (sort keys %$module_ref) {
         my $doc = $module_ref->{ $module };
 
-        $module_txt .= sprintf( qq{=head3 L<%s>\n\n%s\n\n}, $module, $doc );
+        $module_txt .= sprintf( qq{= L<%s|%1\$s>\n%s\n}, $module, $doc );
         push @modules, $module;
     }
+
+    $module_txt .= "\n";
 }
 
 $module_txt .= "=cut\n";

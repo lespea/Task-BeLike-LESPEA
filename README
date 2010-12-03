@@ -2,274 +2,274 @@ NAME
     Task::BeLike::LESPEA - Modules that LESPEA uses on a daily basis
 
 VERSION
-    version 1.200000
+    version 1.200001
 
   Builders
-   Module::Starter
-    Creates a skeleton of a bare module
+    Module::Starter
+        Creates a skeleton of a bare module
 
   Data Parsing
-   Spreadsheet::ParseExcel
-    Read Microsoft xls files
+    Spreadsheet::ParseExcel
+        Read Microsoft xls files
 
-   Spreadsheet::Read
-    Write a wide variety of 'spreadsheets'
+    Spreadsheet::Read
+        Write a wide variety of 'spreadsheets'
 
-   Spreadsheet::WriteExcel
-    Write Microsoft xls files
+    Spreadsheet::WriteExcel
+        Write Microsoft xls files
 
-   Text::CSV_XS
-    Parse CSV files, no matter how borked up they are
+    Text::CSV_XS
+        Parse CSV files, no matter how borked up they are
 
   Database
-   DBD::CSV
-    Treat a CSV like a database
+    DBD::CSV
+        Treat a CSV like a database
 
-   DBD::ODBC
-    Use Microsoft ODBC connections
+    DBD::ODBC
+        Use Microsoft ODBC connections
 
-   DBI
-    Base database handler
+    DBI Base database handler
 
   Dates
-   DateTime::Format::DateParse
-    Takes a string and makes a DateTime object out of it
+    DateTime::Format::DateParse
+        Takes a string and makes a DateTime object out of it
 
   Development
-   Devel::NYTProf
-    Best profiler available! (by far)
+    Devel::NYTProf
+        Best profiler available! (by far)
 
   Dist::Zilla
-   Dist::Zilla
-    Basic module
+    Dist::Zilla
+        Basic module
 
-   Dist::Zilla::App::Command::cover
-    Test your test coverage with Devel::Cover
+    Dist::Zilla::App::Command::cover
+        Test your test coverage with Devel::Cover
 
-   Dist::Zilla::Plugin::Authority
-    Adds an authority context to the version
+    Dist::Zilla::Plugin::Authority
+        Adds an authority context to the version
 
-   Dist::Zilla::Plugin::Bugtracker
-    Adds all the CPAN links to perldoc
+    Dist::Zilla::Plugin::Bugtracker
+        Adds all the CPAN links to perldoc
 
-   Dist::Zilla::Plugin::CheckChangeLog
-    Make sure the changes file is up-to-date
+    Dist::Zilla::Plugin::CheckChangeLog
+        Make sure the changes file is up-to-date
 
-   Dist::Zilla::Plugin::CheckChangesHasContent
-    Make sure the changes file actually has content
+    Dist::Zilla::Plugin::CheckChangesHasContent
+        Make sure the changes file actually has content
 
-   Dist::Zilla::Plugin::CheckChangesTests
-    Make sure you're versioning properly
+    Dist::Zilla::Plugin::CheckChangesTests
+        Make sure you're versioning properly
 
-   Dist::Zilla::Plugin::CompileTests
-    Ensures that the module(s) compile correctly
+    Dist::Zilla::Plugin::CompileTests
+        Ensures that the module(s) compile correctly
 
-   Dist::Zilla::Plugin::CriticTests
-    Checks your code for current best practices
+    Dist::Zilla::Plugin::CriticTests
+        Checks your code for current best practices
 
-   Dist::Zilla::Plugin::Git
-    Used to check/sync with github
+    Dist::Zilla::Plugin::Git
+        Used to check/sync with github
 
-   Dist::Zilla::Plugin::HasVersionTests
-    Make sure the modules have version info
+    Dist::Zilla::Plugin::HasVersionTests
+        Make sure the modules have version info
 
-   Dist::Zilla::Plugin::Homepage
-    Adds the homepage to the distmeta info
+    Dist::Zilla::Plugin::Homepage
+        Adds the homepage to the distmeta info
 
-   Dist::Zilla::Plugin::InstallGuide
-    Create an INSTALL file based on which build system you're using
+    Dist::Zilla::Plugin::InstallGuide
+        Create an INSTALL file based on which build system you're using
 
-   Dist::Zilla::Plugin::KwaliteeTests
-    General quality tests
+    Dist::Zilla::Plugin::KwaliteeTests
+        General quality tests
 
-   Dist::Zilla::Plugin::MinimumPerl
-    Figures out which version of Perl is the minimum version required
+    Dist::Zilla::Plugin::MinimumPerl
+        Figures out which version of Perl is the minimum version required
 
-   Dist::Zilla::Plugin::MinimumVersionTests
-    Make sure the code works with provided versions
+    Dist::Zilla::Plugin::MinimumVersionTests
+        Make sure the code works with provided versions
 
-   Dist::Zilla::Plugin::PodWeaver
-    Dynamically creates POD documentation
+    Dist::Zilla::Plugin::PodWeaver
+        Dynamically creates POD documentation
 
-   Dist::Zilla::Plugin::PortabilityTests
-    Ensures your filenames will work cross-platform
+    Dist::Zilla::Plugin::PortabilityTests
+        Ensures your filenames will work cross-platform
 
-   Dist::Zilla::Plugin::Prepender
-    Adds a header to all your files (usefull small readme)
+    Dist::Zilla::Plugin::Prepender
+        Adds a header to all your files (usefull small readme)
 
-   Dist::Zilla::Plugin::ReadmeFromPod
-    Creates a README file from the POD documentation
+    Dist::Zilla::Plugin::ReadmeFromPod
+        Creates a README file from the POD documentation
 
-   Dist::Zilla::Plugin::ReportVersions
-    List all the version of modules you're using
+    Dist::Zilla::Plugin::ReportVersions
+        List all the version of modules you're using
 
-   Dist::Zilla::Plugin::Repository
-    List github repo in perldoc
+    Dist::Zilla::Plugin::Repository
+        List github repo in perldoc
 
-   Dist::Zilla::Plugin::SynopsisTests
-    Makes sure the code in your SYNOPSIS passes a syntax check
+    Dist::Zilla::Plugin::SynopsisTests
+        Makes sure the code in your SYNOPSIS passes a syntax check
 
-   Dist::Zilla::Plugin::UnusedVarsTests
-    Checks your program for any unused variables (probably a bug?)
+    Dist::Zilla::Plugin::UnusedVarsTests
+        Checks your program for any unused variables (probably a bug?)
 
-   Perl::MinimumVersion
-    Helper module for dzil plugin
+    Perl::MinimumVersion
+        Helper module for dzil plugin
 
-   Perl::PrereqScanner
-    Helper module for dzil plugin
+    Perl::PrereqScanner
+        Helper module for dzil plugin
 
-   Pod::Coverage::TrustPod
-    Helper module for dzil plugin
+    Pod::Coverage::TrustPod
+        Helper module for dzil plugin
 
-   Pod::Elemental::Transformer::List
-    Helper module for dzil plugin
+    Pod::Elemental::Transformer::List
+        Helper module for dzil plugin
 
-   Pod::Weaver
-    Helper module for dzil plugin
+    Pod::Weaver
+        Helper module for dzil plugin
 
-   Pod::Weaver::Section::Support
-    Helper module for dzil plugin
+    Pod::Weaver::Section::Support
+        Helper module for dzil plugin
 
-   Test::CPAN::Meta
-    Helper module for dzil plugin
+    Test::CPAN::Meta
+        Helper module for dzil plugin
 
   Error Checking
-   Try::Tiny
-    At least some basic error checking
+    Try::Tiny
+        At least some basic error checking
 
-   autodie
-    Smart failures in the event a file/dir read/write fails - automagic!
+    autodie
+        Smart failures in the event a file/dir read/write fails - automagic!
 
   File handling
-   File::HomeDir
-    Makes getting files out of the users' home directory super easy
+    File::HomeDir
+        Makes getting files out of the users' home directory super easy
 
-   File::ShareDir
-    Auto store/fetch files in the current modules' "private" folder
-    structure once it's installed
+    File::ShareDir
+        Auto store/fetch files in the current modules' "private" folder
+        structure once it's installed
 
   HTML stuff
-   HTML::Tree
-    Build a huge tree out of the HTML Dom
+    HTML::Tree
+        Build a huge tree out of the HTML Dom
 
-   HTML::TreeBuilder::XPath
-    Do some xpath lookups for an HTML tree
+    HTML::TreeBuilder::XPath
+        Do some xpath lookups for an HTML tree
 
   Installers
-   Exporter::Easy
-    Makes exporting functions a snap
+    Exporter::Easy
+        Makes exporting functions a snap
 
-   Module::Build
-    Pure perl installer
+    Module::Build
+        Pure perl installer
 
-   Module::Install
-    Extension of MakeMaker
+    Module::Install
+        Extension of MakeMaker
 
-   Module::Install::AuthorTests
-    Run author tests
+    Module::Install::AuthorTests
+        Run author tests
 
-   Module::Install::ExtraTests
-    Run extra tests
+    Module::Install::ExtraTests
+        Run extra tests
 
   JSON
-   JSON
-    Basic perl module to parse JSON
+    JSON
+        Basic perl module to parse JSON
 
-   JSON::Any
-    Auto use the best available JSON module
+    JSON::Any
+        Auto use the best available JSON module
 
-   JSON::XS
-    Fast C module to parse JSON
+    JSON::XS
+        Fast C module to parse JSON
 
   Math
-   Math::Big
-    Easily compute math with big ints
+    Math::Big
+        Easily compute math with big ints
 
-   Math::Big::Factors
-    Compute factors of a number
+    Math::Big::Factors
+        Compute factors of a number
 
   Moose
-   Getopt::Long::Descriptive
-    Required for MooseX::App::Cmd
+    Getopt::Long::Descriptive
+        Required for MooseX::App::Cmd
 
-   Moose
-    Base moose module
+    Moose
+        Base moose module
 
-   MooseX::App::Cmd
-    Extend your moose object as a script
+    MooseX::App::Cmd
+        Extend your moose object as a script
 
-   MooseX::Method::Signatures
-    Adds greate paramater varification to methods (with a performance price)
+    MooseX::Method::Signatures
+        Adds greate paramater varification to methods (with a performance
+        price)
 
-   MooseX::Types::Common
-    As it sounds, common types for Moose
+    MooseX::Types::Common
+        As it sounds, common types for Moose
 
-   MooseX::Types::DateTimeX
-    Awesome DateTime parser
+    MooseX::Types::DateTimeX
+        Awesome DateTime parser
 
-   MooseX::Types::Structured
-    Lets you write enforce structured attributes better than base Moose
+    MooseX::Types::Structured
+        Lets you write enforce structured attributes better than base Moose
 
   Networking
-   Net::CIDR::Lite
-    Great CIDR calculation tool
+    Net::CIDR::Lite
+        Great CIDR calculation tool
 
-   Net::DNS
-    Do some DNS lookups
+    Net::DNS
+        Do some DNS lookups
 
-   Net::IP
-    Manip IP address
+    Net::IP
+        Manip IP address
 
-   Net::Netmask
-    Yet another IP manip tool
+    Net::Netmask
+        Yet another IP manip tool
 
-   Net::Ping
-    Simple pinger
+    Net::Ping
+        Simple pinger
 
   Testing
-   Perl::Critic
-    Follow best practices
+    Perl::Critic
+        Follow best practices
 
-   Test::Most
-    A whole bunch of tests modules
+    Test::Most
+        A whole bunch of tests modules
 
-   Test::Perl::Critic
-    Follow best practices
+    Test::Perl::Critic
+        Follow best practices
 
-   Test::Pod
-    Ensures your POD compiles ok
+    Test::Pod
+        Ensures your POD compiles ok
 
-   Test::Pod::Coverage
-    Make sure you document all of your functions
+    Test::Pod::Coverage
+        Make sure you document all of your functions
 
   Utils
-   File::Slurp
-    Read in an entire file all at once
+    File::Slurp
+        Read in an entire file all at once
 
-   List::MoreUtils
-    Provides some advanced-ish list utilities
+    List::MoreUtils
+        Provides some advanced-ish list utilities
 
-   Readonly::XS
-    Marks variables readonly... better than constant for some things
+    Readonly::XS
+        Marks variables readonly... better than constant for some things
 
-   Regexp::Common
-    A ton of precompiled regular expressions
+    Regexp::Common
+        A ton of precompiled regular expressions
 
-   namespace::autoclean
-    Cleans up the namespace of your modules
+    namespace::autoclean
+        Cleans up the namespace of your modules
 
   YAML
-   YAML
-    Basic perl module to parse YAML
+    YAML
+        Basic perl module to parse YAML
 
-   YAML::Any
-    Auto use the best available YAML module
+    YAML::Any
+        Auto use the best available YAML module
 
-   YAML::Syck
-    Another fast module to parse YAML
+    YAML::Syck
+        Another fast module to parse YAML
 
-   YAML::XS
-    Fast C module to parse JSON
+    YAML::XS
+        Fast C module to parse JSON
 
 AUTHOR
     Adam Lesperance <lespea@gmail.com>
@@ -318,7 +318,7 @@ SUPPORT
 
         <http://github.com/lespea/task-belike-lespea>
 
-            git://github.com/lespea/task-belike-lespea.git
+            git clone git://github.com/lespea/task-belike-lespea.git
 
   Bugs
     Please report any bugs or feature requests to "bug-task-belike-lespea at

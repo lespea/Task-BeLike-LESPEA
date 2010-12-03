@@ -6,368 +6,236 @@ package Task::BeLike::LESPEA;
 #ABSTRACT: Modules that LESPEA uses on a daily basis
 =head2 Builders
 
-=head3 L<Module::Starter>
-
+=for :list
+= L<Module::Starter|Module::Starter>
 Creates a skeleton of a bare module
 
 =head2 Data Parsing
 
-=head3 L<Spreadsheet::ParseExcel>
-
+=for :list
+= L<Spreadsheet::ParseExcel|Spreadsheet::ParseExcel>
 Read Microsoft xls files
-
-=head3 L<Spreadsheet::Read>
-
+= L<Spreadsheet::Read|Spreadsheet::Read>
 Write a wide variety of 'spreadsheets'
-
-=head3 L<Spreadsheet::WriteExcel>
-
+= L<Spreadsheet::WriteExcel|Spreadsheet::WriteExcel>
 Write Microsoft xls files
-
-=head3 L<Text::CSV_XS>
-
+= L<Text::CSV_XS|Text::CSV_XS>
 Parse CSV files, no matter how borked up they are
 
 =head2 Database
 
-=head3 L<DBD::CSV>
-
+=for :list
+= L<DBD::CSV|DBD::CSV>
 Treat a CSV like a database
-
-=head3 L<DBD::ODBC>
-
+= L<DBD::ODBC|DBD::ODBC>
 Use Microsoft ODBC connections
-
-=head3 L<DBI>
-
+= L<DBI|DBI>
 Base database handler
 
 =head2 Dates
 
-=head3 L<DateTime::Format::DateParse>
-
+=for :list
+= L<DateTime::Format::DateParse|DateTime::Format::DateParse>
 Takes a string and makes a DateTime object out of it
 
 =head2 Development
 
-=head3 L<Devel::NYTProf>
-
+=for :list
+= L<Devel::NYTProf|Devel::NYTProf>
 Best profiler available! (by far)
 
 =head2 Dist::Zilla
 
-=head3 L<Dist::Zilla>
-
+=for :list
+= L<Dist::Zilla|Dist::Zilla>
 Basic module
-
-=head3 L<Dist::Zilla::App::Command::cover>
-
+= L<Dist::Zilla::App::Command::cover|Dist::Zilla::App::Command::cover>
 Test your test coverage with Devel::Cover
-
-=head3 L<Dist::Zilla::Plugin::Authority>
-
+= L<Dist::Zilla::Plugin::Authority|Dist::Zilla::Plugin::Authority>
 Adds an authority context to the version
-
-=head3 L<Dist::Zilla::Plugin::Bugtracker>
-
+= L<Dist::Zilla::Plugin::Bugtracker|Dist::Zilla::Plugin::Bugtracker>
 Adds all the CPAN links to perldoc
-
-=head3 L<Dist::Zilla::Plugin::CheckChangeLog>
-
+= L<Dist::Zilla::Plugin::CheckChangeLog|Dist::Zilla::Plugin::CheckChangeLog>
 Make sure the changes file is up-to-date
-
-=head3 L<Dist::Zilla::Plugin::CheckChangesHasContent>
-
+= L<Dist::Zilla::Plugin::CheckChangesHasContent|Dist::Zilla::Plugin::CheckChangesHasContent>
 Make sure the changes file actually has content
-
-=head3 L<Dist::Zilla::Plugin::CheckChangesTests>
-
+= L<Dist::Zilla::Plugin::CheckChangesTests|Dist::Zilla::Plugin::CheckChangesTests>
 Make sure you're versioning properly
-
-=head3 L<Dist::Zilla::Plugin::CompileTests>
-
+= L<Dist::Zilla::Plugin::CompileTests|Dist::Zilla::Plugin::CompileTests>
 Ensures that the module(s) compile correctly
-
-=head3 L<Dist::Zilla::Plugin::CriticTests>
-
+= L<Dist::Zilla::Plugin::CriticTests|Dist::Zilla::Plugin::CriticTests>
 Checks your code for current best practices
-
-=head3 L<Dist::Zilla::Plugin::Git>
-
+= L<Dist::Zilla::Plugin::Git|Dist::Zilla::Plugin::Git>
 Used to check/sync with github
-
-=head3 L<Dist::Zilla::Plugin::HasVersionTests>
-
+= L<Dist::Zilla::Plugin::HasVersionTests|Dist::Zilla::Plugin::HasVersionTests>
 Make sure the modules have version info
-
-=head3 L<Dist::Zilla::Plugin::Homepage>
-
+= L<Dist::Zilla::Plugin::Homepage|Dist::Zilla::Plugin::Homepage>
 Adds the homepage to the distmeta info
-
-=head3 L<Dist::Zilla::Plugin::InstallGuide>
-
+= L<Dist::Zilla::Plugin::InstallGuide|Dist::Zilla::Plugin::InstallGuide>
 Create an INSTALL file based on which build system you're using
-
-=head3 L<Dist::Zilla::Plugin::KwaliteeTests>
-
+= L<Dist::Zilla::Plugin::KwaliteeTests|Dist::Zilla::Plugin::KwaliteeTests>
 General quality tests
-
-=head3 L<Dist::Zilla::Plugin::MinimumPerl>
-
+= L<Dist::Zilla::Plugin::MinimumPerl|Dist::Zilla::Plugin::MinimumPerl>
 Figures out which version of Perl is the minimum version required
-
-=head3 L<Dist::Zilla::Plugin::MinimumVersionTests>
-
+= L<Dist::Zilla::Plugin::MinimumVersionTests|Dist::Zilla::Plugin::MinimumVersionTests>
 Make sure the code works with provided versions
-
-=head3 L<Dist::Zilla::Plugin::PodWeaver>
-
+= L<Dist::Zilla::Plugin::PodWeaver|Dist::Zilla::Plugin::PodWeaver>
 Dynamically creates POD documentation
-
-=head3 L<Dist::Zilla::Plugin::PortabilityTests>
-
+= L<Dist::Zilla::Plugin::PortabilityTests|Dist::Zilla::Plugin::PortabilityTests>
 Ensures your filenames will work cross-platform
-
-=head3 L<Dist::Zilla::Plugin::Prepender>
-
+= L<Dist::Zilla::Plugin::Prepender|Dist::Zilla::Plugin::Prepender>
 Adds a header to all your files (usefull small readme)
-
-=head3 L<Dist::Zilla::Plugin::ReadmeFromPod>
-
+= L<Dist::Zilla::Plugin::ReadmeFromPod|Dist::Zilla::Plugin::ReadmeFromPod>
 Creates a README file from the POD documentation
-
-=head3 L<Dist::Zilla::Plugin::ReportVersions>
-
+= L<Dist::Zilla::Plugin::ReportVersions|Dist::Zilla::Plugin::ReportVersions>
 List all the version of modules you're using
-
-=head3 L<Dist::Zilla::Plugin::Repository>
-
+= L<Dist::Zilla::Plugin::Repository|Dist::Zilla::Plugin::Repository>
 List github repo in perldoc
-
-=head3 L<Dist::Zilla::Plugin::SynopsisTests>
-
+= L<Dist::Zilla::Plugin::SynopsisTests|Dist::Zilla::Plugin::SynopsisTests>
 Makes sure the code in your SYNOPSIS passes a syntax check
-
-=head3 L<Dist::Zilla::Plugin::UnusedVarsTests>
-
+= L<Dist::Zilla::Plugin::UnusedVarsTests|Dist::Zilla::Plugin::UnusedVarsTests>
 Checks your program for any unused variables (probably a bug?)
-
-=head3 L<Perl::MinimumVersion>
-
+= L<Perl::MinimumVersion|Perl::MinimumVersion>
 Helper module for dzil plugin
-
-=head3 L<Perl::PrereqScanner>
-
+= L<Perl::PrereqScanner|Perl::PrereqScanner>
 Helper module for dzil plugin
-
-=head3 L<Pod::Coverage::TrustPod>
-
+= L<Pod::Coverage::TrustPod|Pod::Coverage::TrustPod>
 Helper module for dzil plugin
-
-=head3 L<Pod::Elemental::Transformer::List>
-
+= L<Pod::Elemental::Transformer::List|Pod::Elemental::Transformer::List>
 Helper module for dzil plugin
-
-=head3 L<Pod::Weaver>
-
+= L<Pod::Weaver|Pod::Weaver>
 Helper module for dzil plugin
-
-=head3 L<Pod::Weaver::Section::Support>
-
+= L<Pod::Weaver::Section::Support|Pod::Weaver::Section::Support>
 Helper module for dzil plugin
-
-=head3 L<Test::CPAN::Meta>
-
+= L<Test::CPAN::Meta|Test::CPAN::Meta>
 Helper module for dzil plugin
 
 =head2 Error Checking
 
-=head3 L<Try::Tiny>
-
+=for :list
+= L<Try::Tiny|Try::Tiny>
 At least some basic error checking
-
-=head3 L<autodie>
-
+= L<autodie|autodie>
 Smart failures in the event a file/dir read/write fails  -  automagic!
 
 =head2 File handling
 
-=head3 L<File::HomeDir>
-
+=for :list
+= L<File::HomeDir|File::HomeDir>
 Makes getting files out of the users' home directory super easy
-
-=head3 L<File::ShareDir>
-
+= L<File::ShareDir|File::ShareDir>
 Auto store/fetch files in the current modules' "private" folder structure once it's installed
 
 =head2 HTML stuff
 
-=head3 L<HTML::Tree>
-
+=for :list
+= L<HTML::Tree|HTML::Tree>
 Build a huge tree out of the HTML Dom
-
-=head3 L<HTML::TreeBuilder::XPath>
-
+= L<HTML::TreeBuilder::XPath|HTML::TreeBuilder::XPath>
 Do some xpath lookups for an HTML tree
 
 =head2 Installers
 
-=head3 L<Exporter::Easy>
-
+=for :list
+= L<Exporter::Easy|Exporter::Easy>
 Makes exporting functions a snap
-
-=head3 L<Module::Build>
-
+= L<Module::Build|Module::Build>
 Pure perl installer
-
-=head3 L<Module::Install>
-
+= L<Module::Install|Module::Install>
 Extension of MakeMaker
-
-=head3 L<Module::Install::AuthorTests>
-
+= L<Module::Install::AuthorTests|Module::Install::AuthorTests>
 Run author tests
-
-=head3 L<Module::Install::ExtraTests>
-
+= L<Module::Install::ExtraTests|Module::Install::ExtraTests>
 Run extra tests
 
 =head2 JSON
 
-=head3 L<JSON>
-
+=for :list
+= L<JSON|JSON>
 Basic perl module to parse JSON
-
-=head3 L<JSON::Any>
-
+= L<JSON::Any|JSON::Any>
 Auto use the best available JSON module
-
-=head3 L<JSON::XS>
-
+= L<JSON::XS|JSON::XS>
 Fast C module to parse JSON
 
 =head2 Math
 
-=head3 L<Math::Big>
-
+=for :list
+= L<Math::Big|Math::Big>
 Easily compute math with big ints
-
-=head3 L<Math::Big::Factors>
-
+= L<Math::Big::Factors|Math::Big::Factors>
 Compute factors of a number
 
 =head2 Moose
 
-=head3 L<Getopt::Long::Descriptive>
-
+=for :list
+= L<Getopt::Long::Descriptive|Getopt::Long::Descriptive>
 Required for MooseX::App::Cmd
-
-=head3 L<Moose>
-
+= L<Moose|Moose>
 Base moose module
-
-=head3 L<MooseX::App::Cmd>
-
+= L<MooseX::App::Cmd|MooseX::App::Cmd>
 Extend your moose object as a script
-
-=head3 L<MooseX::Method::Signatures>
-
+= L<MooseX::Method::Signatures|MooseX::Method::Signatures>
 Adds greate paramater varification to methods (with a performance price)
-
-=head3 L<MooseX::Types::Common>
-
+= L<MooseX::Types::Common|MooseX::Types::Common>
 As it sounds, common types for Moose
-
-=head3 L<MooseX::Types::DateTimeX>
-
+= L<MooseX::Types::DateTimeX|MooseX::Types::DateTimeX>
 Awesome DateTime parser
-
-=head3 L<MooseX::Types::Structured>
-
+= L<MooseX::Types::Structured|MooseX::Types::Structured>
 Lets you write enforce structured attributes better than base Moose
 
 =head2 Networking
 
-=head3 L<Net::CIDR::Lite>
-
+=for :list
+= L<Net::CIDR::Lite|Net::CIDR::Lite>
 Great CIDR calculation tool
-
-=head3 L<Net::DNS>
-
+= L<Net::DNS|Net::DNS>
 Do some DNS lookups
-
-=head3 L<Net::IP>
-
+= L<Net::IP|Net::IP>
 Manip IP address
-
-=head3 L<Net::Netmask>
-
+= L<Net::Netmask|Net::Netmask>
 Yet another IP manip tool
-
-=head3 L<Net::Ping>
-
+= L<Net::Ping|Net::Ping>
 Simple pinger
 
 =head2 Testing
 
-=head3 L<Perl::Critic>
-
+=for :list
+= L<Perl::Critic|Perl::Critic>
 Follow best practices
-
-=head3 L<Test::Most>
-
+= L<Test::Most|Test::Most>
 A whole bunch of tests modules
-
-=head3 L<Test::Perl::Critic>
-
+= L<Test::Perl::Critic|Test::Perl::Critic>
 Follow best practices
-
-=head3 L<Test::Pod>
-
+= L<Test::Pod|Test::Pod>
 Ensures your POD compiles ok
-
-=head3 L<Test::Pod::Coverage>
-
+= L<Test::Pod::Coverage|Test::Pod::Coverage>
 Make sure you document all of your functions
 
 =head2 Utils
 
-=head3 L<File::Slurp>
-
+=for :list
+= L<File::Slurp|File::Slurp>
 Read in an entire file all at once
-
-=head3 L<List::MoreUtils>
-
+= L<List::MoreUtils|List::MoreUtils>
 Provides some advanced-ish list utilities
-
-=head3 L<Readonly::XS>
-
+= L<Readonly::XS|Readonly::XS>
 Marks variables readonly... better than constant for some things
-
-=head3 L<Regexp::Common>
-
+= L<Regexp::Common|Regexp::Common>
 A ton of precompiled regular expressions
-
-=head3 L<namespace::autoclean>
-
+= L<namespace::autoclean|namespace::autoclean>
 Cleans up the namespace of your modules
 
 =head2 YAML
 
-=head3 L<YAML>
-
+=for :list
+= L<YAML|YAML>
 Basic perl module to parse YAML
-
-=head3 L<YAML::Any>
-
+= L<YAML::Any|YAML::Any>
 Auto use the best available YAML module
-
-=head3 L<YAML::Syck>
-
+= L<YAML::Syck|YAML::Syck>
 Another fast module to parse YAML
-
-=head3 L<YAML::XS>
-
+= L<YAML::XS|YAML::XS>
 Fast C module to parse JSON
 
 =cut

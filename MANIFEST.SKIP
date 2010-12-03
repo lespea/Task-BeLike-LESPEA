@@ -10,3 +10,4 @@ Task-BeLike-*
 cover_db
 \.bak$
 \.git.*
+gen_module.pl
