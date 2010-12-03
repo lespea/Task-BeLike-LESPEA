@@ -7,7 +7,7 @@ use File::Spec;
 
 use constant  PATH_Mod    => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
 use constant  PATH_Dist   => 'dist.ini';
-use constant  VERSION     => 1.12;
+use constant  VERSION     => '1.200000';
 
 
 #  Setup modules
