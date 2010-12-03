@@ -4,14 +4,11 @@ use strict;
 package Task::BeLike::LESPEA;
 
 #ABSTRACT: Modules that LESPEA uses on a daily basis
-
-
 =head2 Builders
 
 =head3 L<Module::Starter>
 
 Creates a skeleton of a bare module
-
 
 =head2 Data Parsing
 
@@ -31,7 +28,6 @@ Write Microsoft xls files
 
 Parse CSV files, no matter how borked up they are
 
-
 =head2 Database
 
 =head3 L<DBD::CSV>
@@ -46,20 +42,17 @@ Use Microsoft ODBC connections
 
 Base database handler
 
-
 =head2 Dates
 
 =head3 L<DateTime::Format::DateParse>
 
 Takes a string and makes a DateTime object out of it
 
-
 =head2 Development
 
 =head3 L<Devel::NYTProf>
 
 Best profiler available! (by far)
-
 
 =head2 Dist::Zilla
 
@@ -70,6 +63,10 @@ Basic module
 =head3 L<Dist::Zilla::App::Command::cover>
 
 Test your test coverage with Devel::Cover
+
+=head3 L<Dist::Zilla::Plugin::Authority>
+
+Adds an authority context to the version
 
 =head3 L<Dist::Zilla::Plugin::Bugtracker>
 
@@ -103,6 +100,10 @@ Used to check/sync with github
 
 Make sure the modules have version info
 
+=head3 L<Dist::Zilla::Plugin::Homepage>
+
+Adds the homepage to the distmeta info
+
 =head3 L<Dist::Zilla::Plugin::InstallGuide>
 
 Create an INSTALL file based on which build system you're using
@@ -119,10 +120,6 @@ Figures out which version of Perl is the minimum version required
 
 Make sure the code works with provided versions
 
-=head3 L<Dist::Zilla::Plugin::PodSpellingTests>
-
-Check spelling of perldoc
-
 =head3 L<Dist::Zilla::Plugin::PodWeaver>
 
 Dynamically creates POD documentation
@@ -138,10 +135,6 @@ Adds a header to all your files (usefull small readme)
 =head3 L<Dist::Zilla::Plugin::ReadmeFromPod>
 
 Creates a README file from the POD documentation
-
-=head3 L<Dist::Zilla::Plugin::ReadmeMarkdownFromPod>
-
-Create markdown from Readme
 
 =head3 L<Dist::Zilla::Plugin::ReportVersions>
 
@@ -187,7 +180,6 @@ Helper module for dzil plugin
 
 Helper module for dzil plugin
 
-
 =head2 Error Checking
 
 =head3 L<Try::Tiny>
@@ -197,7 +189,6 @@ At least some basic error checking
 =head3 L<autodie>
 
 Smart failures in the event a file/dir read/write fails  -  automagic!
-
 
 =head2 File handling
 
@@ -209,7 +200,6 @@ Makes getting files out of the users' home directory super easy
 
 Auto store/fetch files in the current modules' "private" folder structure once it's installed
 
-
 =head2 HTML stuff
 
 =head3 L<HTML::Tree>
@@ -219,7 +209,6 @@ Build a huge tree out of the HTML Dom
 =head3 L<HTML::TreeBuilder::XPath>
 
 Do some xpath lookups for an HTML tree
-
 
 =head2 Installers
 
@@ -243,7 +232,6 @@ Run author tests
 
 Run extra tests
 
-
 =head2 JSON
 
 =head3 L<JSON>
@@ -258,7 +246,6 @@ Auto use the best available JSON module
 
 Fast C module to parse JSON
 
-
 =head2 Math
 
 =head3 L<Math::Big>
@@ -268,7 +255,6 @@ Easily compute math with big ints
 =head3 L<Math::Big::Factors>
 
 Compute factors of a number
-
 
 =head2 Moose
 
@@ -292,10 +278,13 @@ Adds greate paramater varification to methods (with a performance price)
 
 As it sounds, common types for Moose
 
+=head3 L<MooseX::Types::DateTimeX>
+
+Awesome DateTime parser
+
 =head3 L<MooseX::Types::Structured>
 
 Lets you write enforce structured attributes better than base Moose
-
 
 =head2 Networking
 
@@ -319,7 +308,6 @@ Yet another IP manip tool
 
 Simple pinger
 
-
 =head2 Testing
 
 =head3 L<Perl::Critic>
@@ -341,7 +329,6 @@ Ensures your POD compiles ok
 =head3 L<Test::Pod::Coverage>
 
 Make sure you document all of your functions
-
 
 =head2 Utils
 
@@ -365,7 +352,6 @@ A ton of precompiled regular expressions
 
 Cleans up the namespace of your modules
 
-
 =head2 YAML
 
 =head3 L<YAML>
@@ -385,7 +371,4 @@ Another fast module to parse YAML
 Fast C module to parse JSON
 
 =cut
-
-
-
 1;

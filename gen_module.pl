@@ -45,6 +45,7 @@ my $pod_section = {
     'Dist::Zilla' => {
         'Dist::Zilla'                                 => q{Basic module},
         'Dist::Zilla::App::Command::cover'            => q{Test your test coverage with Devel::Cover},
+        'Dist::Zilla::Plugin::Authority'              => q{Adds an authority context to the version},
         'Dist::Zilla::Plugin::Bugtracker'             => q{Adds all the CPAN links to perldoc},
         'Dist::Zilla::Plugin::CheckChangeLog'         => q{Make sure the changes file is up-to-date},
         'Dist::Zilla::Plugin::CheckChangesHasContent' => q{Make sure the changes file actually has content},
@@ -53,16 +54,16 @@ my $pod_section = {
         'Dist::Zilla::Plugin::CriticTests'            => q{Checks your code for current best practices},
         'Dist::Zilla::Plugin::Git'                    => q{Used to check/sync with github},
         'Dist::Zilla::Plugin::HasVersionTests'        => q{Make sure the modules have version info},
+        'Dist::Zilla::Plugin::Homepage'               => q{Adds the homepage to the distmeta info},
         'Dist::Zilla::Plugin::InstallGuide'           => q{Create an INSTALL file based on which build system you're using},
         'Dist::Zilla::Plugin::KwaliteeTests'          => q{General quality tests},
         'Dist::Zilla::Plugin::MinimumPerl'            => q{Figures out which version of Perl is the minimum version required},
         'Dist::Zilla::Plugin::MinimumVersionTests'    => q{Make sure the code works with provided versions},
-        'Dist::Zilla::Plugin::PodSpellingTests'       => q{Check spelling of perldoc},
+        #'Dist::Zilla::Plugin::PodSpellingTests'       => q{Check spelling of perldoc},
         'Dist::Zilla::Plugin::PodWeaver'              => q{Dynamically creates POD documentation},
         'Dist::Zilla::Plugin::PortabilityTests'       => q{Ensures your filenames will work cross-platform},
         'Dist::Zilla::Plugin::Prepender'              => q{Adds a header to all your files (usefull small readme)},
         'Dist::Zilla::Plugin::ReadmeFromPod'          => q{Creates a README file from the POD documentation},
-        'Dist::Zilla::Plugin::ReadmeMarkdownFromPod'  => q{Create markdown from Readme},
         'Dist::Zilla::Plugin::ReportVersions'         => q{List all the version of modules you're using},
         'Dist::Zilla::Plugin::Repository'             => q{List github repo in perldoc},
         'Dist::Zilla::Plugin::SynopsisTests'          => q{Makes sure the code in your SYNOPSIS passes a syntax check},
@@ -123,8 +124,7 @@ my $pod_section = {
         'MooseX::App::Cmd'           => q{Extend your moose object as a script},
         'MooseX::Method::Signatures' => q{Adds greate paramater varification to methods (with a performance price)},
         'MooseX::Types::Common'      => q{As it sounds, common types for Moose},
-        #  Currently very broken :(
-        #'MooseX::Types::DateTimeX'   => q{Awesome DateTime parser},
+        'MooseX::Types::DateTimeX'   => q{Awesome DateTime parser},
         'MooseX::Types::Structured'  => q{Lets you write enforce structured attributes better than base Moose},
     },
 
@@ -177,14 +177,13 @@ use strict;
 package Task::BeLike::LESPEA;
 
 #ABSTRACT: Modules that LESPEA uses on a daily basis
-
 __END_START
 
 
 
 my ( $module_txt, @modules );
 for  my $section  (sort keys %$pod_section) {
-    $module_txt .= sprintf( "\n=head2 %s\n\n", $section );
+    $module_txt .= sprintf( "=head2 %s\n\n", $section );
     my $module_ref = $pod_section->{ $section };
 
     for  my $module  (sort keys %$module_ref) {
@@ -195,14 +194,14 @@ for  my $section  (sort keys %$pod_section) {
     }
 }
 
-$module_txt .= "=cut\n\n";
+$module_txt .= "=cut\n";
 
 #for  my $module  (sort @modules) {
 #    $module_txt .= sprintf( qq{use %s;\n}, $module );
 #}
 
 
-my $txt = join '', ( $begin_txt, $module_txt, "\n\n1;" );
+my $txt = join '', ( $begin_txt, $module_txt, "1;" );
 
 open  my $fh, '>', PATH_Mod;
 print {$fh} $txt;
@@ -225,22 +224,21 @@ copyright_year   = 2010
 
 ; -- fetch & generate files
 [GatherDir]
-;[CompileTests]
+[CompileTests]
 [MinimumPerl]
 [CriticTests]
 [HasVersionTests]
 [MetaTests]
 [MinimumVersionTests]
-;[PodCoverageTests]
-;;[PodSpellingTests]
+[PodCoverageTests]
 [PodSyntaxTests]
 [PortabilityTests]
-;[SynopsisTests]
-;[UnusedVarsTests]
-;[ReadmeMarkdownFromPod]
+[SynopsisTests]
+[UnusedVarsTests]
 [ReadmeFromPod]
+[NoTabsTests]
+[EOLTests]
 [KwaliteeTests]
-[PerlTidy]
 
 
 ; -- remove some files
@@ -253,15 +251,23 @@ copyright_year   = 2010
 %s
 
 ; -- munge files
+[Homepage]
+[AutoMetaResources]
+bugtracker.rt = 1
+bugtracker.github = user:lespea
+repository.github = user:lespea
+
+
 [ExtraTests]
 [PkgVersion]
+[Authority]
+authority = cpan:LESPEA
+do_metadata = 1
 
 ; -- dynamic meta-information
 [ExecDir]
-[ShareDir]
 [Bugtracker]
-[Repository]
-;[MetaConfig]
+[MetaConfig]
 
 ; -- generate meta files
 [License]
@@ -270,6 +276,8 @@ copyright_year   = 2010
 [MetaYAML]
 [MetaJSON]
 [PodWeaver]
+
+
 [Manifest] ; should come last
 
 ; -- release

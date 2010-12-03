@@ -2,7 +2,7 @@ NAME
     Task::BeLike::LESPEA - Modules that LESPEA uses on a daily basis
 
 VERSION
-    version 1.10
+    version 1.12
 
   Builders
    Module::Starter
@@ -46,6 +46,9 @@ VERSION
    Dist::Zilla::App::Command::cover
     Test your test coverage with Devel::Cover
 
+   Dist::Zilla::Plugin::Authority
+    Adds an authority context to the version
+
    Dist::Zilla::Plugin::Bugtracker
     Adds all the CPAN links to perldoc
 
@@ -70,6 +73,9 @@ VERSION
    Dist::Zilla::Plugin::HasVersionTests
     Make sure the modules have version info
 
+   Dist::Zilla::Plugin::Homepage
+    Adds the homepage to the distmeta info
+
    Dist::Zilla::Plugin::InstallGuide
     Create an INSTALL file based on which build system you're using
 
@@ -82,9 +88,6 @@ VERSION
    Dist::Zilla::Plugin::MinimumVersionTests
     Make sure the code works with provided versions
 
-   Dist::Zilla::Plugin::PodSpellingTests
-    Check spelling of perldoc
-
    Dist::Zilla::Plugin::PodWeaver
     Dynamically creates POD documentation
 
@@ -96,9 +99,6 @@ VERSION
 
    Dist::Zilla::Plugin::ReadmeFromPod
     Creates a README file from the POD documentation
-
-   Dist::Zilla::Plugin::ReadmeMarkdownFromPod
-    Create markdown from Readme
 
    Dist::Zilla::Plugin::ReportVersions
     List all the version of modules you're using
@@ -131,9 +131,6 @@ VERSION
     Helper module for dzil plugin
 
    Test::CPAN::Meta
-    Helper module for dzil plugin
-
-   Test::Perl::Critic
     Helper module for dzil plugin
 
   Error Checking
@@ -206,6 +203,9 @@ VERSION
 
    MooseX::Types::Common
     As it sounds, common types for Moose
+
+   MooseX::Types::DateTimeX
+    Awesome DateTime parser
 
    MooseX::Types::Structured
     Lets you write enforce structured attributes better than base Moose
@@ -314,12 +314,11 @@ SUPPORT
 
     *   Source Code Repository
 
-        The code is open to the world, and available for you to hack on.
-        Please feel free to browse it and play with it, or whatever. If you
-        want to contribute patches, please send me a diff or prod me to pull
-        from your repository :)
+        You can contribute or fork this project via github:
 
-        <git://github.com/lespea/Task-BeLike-LESPEA>
+        <http://github.com/lespea/task-belike-lespea>
+
+            git://github.com/lespea/task-belike-lespea.git
 
   Bugs
     Please report any bugs or feature requests to "bug-task-belike-lespea at
