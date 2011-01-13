@@ -5,9 +5,10 @@ use Modern::Perl;
 use autodie;
 use File::Spec;
 
-use constant  PATH_Mod    => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
-use constant  PATH_Dist   => 'dist.ini';
-use constant  VERSION     => '1.200001';
+use constant  PATH_Mod  => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
+use constant  PATH_Dist => 'dist.ini';
+use constant  BAT_FILE  => 'ppm_install.bat';
+use constant  VERSION   => '1.200001';
 
 
 #  Setup modules
@@ -305,10 +306,13 @@ __END_DIST__
 
 
 
+open $fh, '>', BAT_FILE;
 my $module_versions;
 for  my $module  (sort @modules) {
     $module_versions .= sprintf( qq{%s = 0\n}, $module );
+    printf {$fh} "call ppm install %s\n", $module;
 }
+close $fh;
 
 
 open  $fh, '>', PATH_Dist;
