@@ -1,26 +1,32 @@
-Revision history for Task-BeLike-LESPEA
+Revision history for {{$dist->name}}
 
-1.200001    12/03/2010 03:09:22 AM (CST)
+{{$NEXT}}
+    *   Switch over to new Dist::Zilla
+    *   Standardize Changes layout
+
+
+1.200001  2010-12-03 03:09:22 America/Chicago
     *   Switch pod to definitions instead of head3's
 
-1.200000    12/02/2010 09:29:28 PM (CST)
+
+1.200000  2010-12-02 21:29:28 America/Chicago
     *   Use Prereqs instead of relying on Autoprereqs
     *   Autoprereqs instead of Autoprereq
     *   Switch layout around a bit
     *   Add homepage & more repo info
 
 
-1.11        08/21/2010 06:20:58 PM (CDT)
+1.11      2010-08-21 18:20:58 America/Chicago
     *   Add xt tests
     *   Add light-weight examples folder
     *   Don't include Dist::Zilla info in META files
 
 
-1.10        08/21/2010 04:24:21 PM (CDT)
+1.10      2010-08-21 16:24:21 America/Chicago
     *   Add some Module::Install modules
     *   Add some Math modules
     *   Add a DateTime module
 
 
-1.00        08/21/2010 03:24:29 PM (CDT)
+1.00      2010-08-21 15:24:29 America/Chicago
     *   First release of the module
