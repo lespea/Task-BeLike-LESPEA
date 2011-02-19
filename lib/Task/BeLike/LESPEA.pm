@@ -49,8 +49,6 @@ Best profiler available! (by far)
 =for :list
 = L<Dist::Zilla|Dist::Zilla>
 Basic module
-= L<Dist::Zilla::App::Command::cover|Dist::Zilla::App::Command::cover>
-Test your test coverage with Devel::Cover
 = L<Dist::Zilla::Plugin::Authority|Dist::Zilla::Plugin::Authority>
 Adds an authority context to the version
 = L<Dist::Zilla::Plugin::Bugtracker|Dist::Zilla::Plugin::Bugtracker>
@@ -65,8 +63,6 @@ Make sure you're versioning properly
 Ensures that the module(s) compile correctly
 = L<Dist::Zilla::Plugin::CriticTests|Dist::Zilla::Plugin::CriticTests>
 Checks your code for current best practices
-= L<Dist::Zilla::Plugin::Git|Dist::Zilla::Plugin::Git>
-Used to check/sync with github
 = L<Dist::Zilla::Plugin::HasVersionTests|Dist::Zilla::Plugin::HasVersionTests>
 Make sure the modules have version info
 = L<Dist::Zilla::Plugin::Homepage|Dist::Zilla::Plugin::Homepage>
@@ -95,6 +91,8 @@ List github repo in perldoc
 Makes sure the code in your SYNOPSIS passes a syntax check
 = L<Dist::Zilla::Plugin::UnusedVarsTests|Dist::Zilla::Plugin::UnusedVarsTests>
 Checks your program for any unused variables (probably a bug?)
+= L<Dist::Zilla::PluginBundle::Author::LESPEA|Dist::Zilla::PluginBundle::Author::LESPEA>
+My dzil config
 = L<Perl::MinimumVersion|Perl::MinimumVersion>
 Helper module for dzil plugin
 = L<Perl::PrereqScanner|Perl::PrereqScanner>

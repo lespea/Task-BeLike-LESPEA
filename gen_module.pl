@@ -8,7 +8,7 @@ use File::Spec;
 use constant  PATH_Mod  => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
 use constant  PATH_Dist => 'dist.ini';
 use constant  BAT_FILE  => 'ppm_install.bat';
-use constant  VERSION   => '1.200001';
+use constant  VERSION   => '2.000000';
 
 
 #  Setup modules
@@ -45,7 +45,7 @@ my $pod_section = {
 
     'Dist::Zilla' => {
         'Dist::Zilla'                                 => q{Basic module},
-        'Dist::Zilla::App::Command::cover'            => q{Test your test coverage with Devel::Cover},
+        #'Dist::Zilla::App::Command::cover'            => q{Test your test coverage with Devel::Cover},
         'Dist::Zilla::Plugin::Authority'              => q{Adds an authority context to the version},
         'Dist::Zilla::Plugin::Bugtracker'             => q{Adds all the CPAN links to perldoc},
         'Dist::Zilla::Plugin::CheckChangeLog'         => q{Make sure the changes file is up-to-date},
@@ -53,7 +53,7 @@ my $pod_section = {
         'Dist::Zilla::Plugin::CheckChangesTests'      => q{Make sure you're versioning properly},
         'Dist::Zilla::Plugin::CompileTests'           => q{Ensures that the module(s) compile correctly},
         'Dist::Zilla::Plugin::CriticTests'            => q{Checks your code for current best practices},
-        'Dist::Zilla::Plugin::Git'                    => q{Used to check/sync with github},
+        #'Dist::Zilla::Plugin::Git'                    => q{Used to check/sync with github},
         'Dist::Zilla::Plugin::HasVersionTests'        => q{Make sure the modules have version info},
         'Dist::Zilla::Plugin::Homepage'               => q{Adds the homepage to the distmeta info},
         'Dist::Zilla::Plugin::InstallGuide'           => q{Create an INSTALL file based on which build system you're using},
@@ -75,6 +75,7 @@ my $pod_section = {
         'Pod::Weaver'                                 => q{Helper module for dzil plugin},
         'Pod::Weaver::Section::Support'               => q{Helper module for dzil plugin},
         'Test::CPAN::Meta'                            => q{Helper module for dzil plugin},
+        'Dist::Zilla::PluginBundle::Author::LESPEA'   => q{My dzil config},
     },
 
 
@@ -225,81 +226,48 @@ copyright_holder = Adam Lesperance
 copyright_year   = 2010
 
 
+[@Author::LESPEA]
+-remove            = ReportVersions
 
-; -- fetch & generate files
-[GatherDir]
-[CompileTests]
-[MinimumPerl]
-[CriticTests]
-[HasVersionTests]
-[MetaTests]
-[MinimumVersionTests]
-[PodCoverageTests]
-[PodSyntaxTests]
-[PortabilityTests]
-[SynopsisTests]
-[UnusedVarsTests]
-[ReadmeFromPod]
-[NoTabsTests]
-[EOLTests]
-[KwaliteeTests]
+;release           = real
+;
+;archive           = 1
+;archive_directory = releases
+;
+;copy_file         = file1 file2
+;move_file         = file3 file4
+;
+;tidy_perl         = 0
+;
+;add_meta          = 1
+;
+;compile_synopsis  = 1
 
 
-; -- remove some files
-[PruneCruft]
-[ManifestSkip]
-
-; -- get prereqs
-[AutoPrereqs]
 [Prereqs]
 %s
 
-; -- munge files
-[Homepage]
-[AutoMetaResources]
-bugtracker.rt = 1
-bugtracker.github = user:lespea
-repository.github = user:lespea
 
 
-[ExtraTests]
-[PkgVersion]
-[Authority]
-authority = cpan:LESPEA
-do_metadata = 1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;         Non-Standard Win32        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; -- dynamic meta-information
-[ExecDir]
-[Bugtracker]
-[MetaConfig]
-
-; -- generate meta files
-[License]
-[ModuleBuild]
-[InstallGuide]
-[MetaYAML]
-[MetaJSON]
-[PodWeaver]
+[Signature]
+sign = always
 
 
-[Manifest] ; should come last
-
-; -- release
-[CheckChangeLog]
-[CheckChangesTests]
-[CheckChangesHasContent]
 [Git::Check]
-[TestRelease]
-[ConfirmRelease]
+allow_dirty = README.pod
 
-; releaser
-[UploadToCPAN]
+;  Commit all the local changes
+[Git::Commit / Commit_Changes]
 
+;  Tag the release
 [Git::Tag]
 tag_format = release-%%v
 
-[Git::Commit / Commit_Changes]
-
+;  Finally push the changes to git
 [Git::Push]
 push_to = origin
 __END_DIST__

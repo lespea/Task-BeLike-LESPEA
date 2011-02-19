@@ -4,7 +4,6 @@ call ppm install DBI
 call ppm install DateTime::Format::DateParse
 call ppm install Devel::NYTProf
 call ppm install Dist::Zilla
-call ppm install Dist::Zilla::App::Command::cover
 call ppm install Dist::Zilla::Plugin::Authority
 call ppm install Dist::Zilla::Plugin::Bugtracker
 call ppm install Dist::Zilla::Plugin::CheckChangeLog
@@ -12,7 +11,6 @@ call ppm install Dist::Zilla::Plugin::CheckChangesHasContent
 call ppm install Dist::Zilla::Plugin::CheckChangesTests
 call ppm install Dist::Zilla::Plugin::CompileTests
 call ppm install Dist::Zilla::Plugin::CriticTests
-call ppm install Dist::Zilla::Plugin::Git
 call ppm install Dist::Zilla::Plugin::HasVersionTests
 call ppm install Dist::Zilla::Plugin::Homepage
 call ppm install Dist::Zilla::Plugin::InstallGuide
@@ -27,6 +25,7 @@ call ppm install Dist::Zilla::Plugin::ReportVersions
 call ppm install Dist::Zilla::Plugin::Repository
 call ppm install Dist::Zilla::Plugin::SynopsisTests
 call ppm install Dist::Zilla::Plugin::UnusedVarsTests
+call ppm install Dist::Zilla::PluginBundle::Author::LESPEA
 call ppm install Exporter::Easy
 call ppm install File::HomeDir
 call ppm install File::ShareDir
