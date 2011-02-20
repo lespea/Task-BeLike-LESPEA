@@ -444,6 +444,89 @@ See perlmodinstall for information and options on installing Perl modules.
 
 Adam Lesperance <lespea@gmail.com>
 
+=for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders
+
+=head1 SUPPORT
+
+=head2 Perldoc
+
+You can find documentation for this module with the perldoc command.
+
+  perldoc Task::BeLike::LESPEA
+
+=head2 Websites
+
+The following websites have more information about this module, and may be of help to you. As always,
+in addition to those websites please use your favorite search engine to discover more resources.
+
+=over 4
+
+=item *
+
+Search CPAN
+
+L<http://search.cpan.org/dist/Task-BeLike-LESPEA>
+
+=item *
+
+RT: CPAN's Bug Tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Task-BeLike-LESPEA>
+
+=item *
+
+AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/Task-BeLike-LESPEA>
+
+=item *
+
+CPAN Ratings
+
+L<http://cpanratings.perl.org/d/Task-BeLike-LESPEA>
+
+=item *
+
+CPAN Forum
+
+L<http://cpanforum.com/dist/Task-BeLike-LESPEA>
+
+=item *
+
+CPANTS Kwalitee
+
+L<http://cpants.perl.org/dist/overview/Task-BeLike-LESPEA>
+
+=item *
+
+CPAN Testers Results
+
+L<http://cpantesters.org/distro/T/Task-BeLike-LESPEA.html>
+
+=item *
+
+CPAN Testers Matrix
+
+L<http://matrix.cpantesters.org/?dist=Task-BeLike-LESPEA>
+
+=back
+
+=head2 Bugs / Feature Requests
+
+Please report any bugs or feature requests by email to C<bug-task-belike-lespea at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Task-BeLike-LESPEA>. You will be automatically notified of any
+progress on the request by the system.
+
+=head2 Source Code
+
+The code is open to the world, and available for you to hack on. Please feel free to browse it and play
+with it, or whatever. If you want to contribute patches, please send me a diff or prod me to pull
+from your repository :)
+
+L<https://github.com/lespea/task-belike-lespea>
+
+  git clone git://github.com/lespea/task-belike-lespea.git
+
 =head1 COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2010 by Adam Lesperance.
