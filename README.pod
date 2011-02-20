@@ -6,6 +6,8 @@ Task::BeLike::LESPEA - Modules that LESPEA uses on a daily basis
 
 version 2.000000
 
+=encoding utf8
+
 =head2 Builders
 
 =over 4

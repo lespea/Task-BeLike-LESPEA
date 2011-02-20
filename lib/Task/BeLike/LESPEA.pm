@@ -1,9 +1,13 @@
 use warnings;
 use strict;
+use utf8;
 
 package Task::BeLike::LESPEA;
 
-#ABSTRACT: Modules that LESPEA uses on a daily basis
+# ABSTRACT: Modules that LESPEA uses on a daily basis
+
+=encoding utf8
+
 =head2 Builders
 
 =for :list

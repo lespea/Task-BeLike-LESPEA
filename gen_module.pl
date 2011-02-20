@@ -174,10 +174,14 @@ my $pod_section = {
 my $begin_txt = <<'__END_START';
 use warnings;
 use strict;
+use utf8;
 
 package Task::BeLike::LESPEA;
 
-#ABSTRACT: Modules that LESPEA uses on a daily basis
+# ABSTRACT: Modules that LESPEA uses on a daily basis
+
+=encoding utf8
+
 __END_START
 
 
