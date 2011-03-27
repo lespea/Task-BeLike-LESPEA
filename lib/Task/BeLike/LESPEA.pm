@@ -178,7 +178,7 @@ Base moose module
 = L<MooseX::App::Cmd|MooseX::App::Cmd>
 Extend your moose object as a script
 = L<MooseX::Method::Signatures|MooseX::Method::Signatures>
-Adds greate paramater varification to methods (with a performance price)
+Adds greate parameter varification to methods (with a performance price)
 = L<MooseX::Types::Common|MooseX::Types::Common>
 As it sounds, common types for Moose
 = L<MooseX::Types::DateTimeX|MooseX::Types::DateTimeX>

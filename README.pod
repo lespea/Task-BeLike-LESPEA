@@ -322,7 +322,7 @@ Extend your moose object as a script
 
 =item L<MooseX::Method::Signatures|MooseX::Method::Signatures>
 
-Adds greate paramater varification to methods (with a performance price)
+Adds greate parameter varification to methods (with a performance price)
 
 =item L<MooseX::Types::Common|MooseX::Types::Common>
 
