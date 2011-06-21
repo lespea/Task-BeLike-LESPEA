@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+2.001000  2011-06-21 00:42:06 America/Chicago
     [Bugfix]
     *   Corrected POD spelling]
 
