@@ -4,7 +4,7 @@ Task::BeLike::LESPEA - Modules that LESPEA uses on a daily basis
 
 =head1 VERSION
 
-version 2.000000
+version 2.001000
 
 =encoding utf8
 
@@ -86,121 +86,9 @@ Best profiler available! (by far)
 
 Basic module
 
-=item L<Dist::Zilla::Plugin::Authority|Dist::Zilla::Plugin::Authority>
-
-Adds an authority context to the version
-
-=item L<Dist::Zilla::Plugin::Bugtracker|Dist::Zilla::Plugin::Bugtracker>
-
-Adds all the CPAN links to perldoc
-
-=item L<Dist::Zilla::Plugin::CheckChangeLog|Dist::Zilla::Plugin::CheckChangeLog>
-
-Make sure the changes file is up-to-date
-
-=item L<Dist::Zilla::Plugin::CheckChangesHasContent|Dist::Zilla::Plugin::CheckChangesHasContent>
-
-Make sure the changes file actually has content
-
-=item L<Dist::Zilla::Plugin::CheckChangesTests|Dist::Zilla::Plugin::CheckChangesTests>
-
-Make sure you're versioning properly
-
-=item L<Dist::Zilla::Plugin::CompileTests|Dist::Zilla::Plugin::CompileTests>
-
-Ensures that the module(s) compile correctly
-
-=item L<Dist::Zilla::Plugin::CriticTests|Dist::Zilla::Plugin::CriticTests>
-
-Checks your code for current best practices
-
-=item L<Dist::Zilla::Plugin::HasVersionTests|Dist::Zilla::Plugin::HasVersionTests>
-
-Make sure the modules have version info
-
-=item L<Dist::Zilla::Plugin::Homepage|Dist::Zilla::Plugin::Homepage>
-
-Adds the homepage to the distmeta info
-
-=item L<Dist::Zilla::Plugin::InstallGuide|Dist::Zilla::Plugin::InstallGuide>
-
-Create an INSTALL file based on which build system you're using
-
-=item L<Dist::Zilla::Plugin::KwaliteeTests|Dist::Zilla::Plugin::KwaliteeTests>
-
-General quality tests
-
-=item L<Dist::Zilla::Plugin::MinimumPerl|Dist::Zilla::Plugin::MinimumPerl>
-
-Figures out which version of Perl is the minimum version required
-
-=item L<Dist::Zilla::Plugin::MinimumVersionTests|Dist::Zilla::Plugin::MinimumVersionTests>
-
-Make sure the code works with provided versions
-
-=item L<Dist::Zilla::Plugin::PodWeaver|Dist::Zilla::Plugin::PodWeaver>
-
-Dynamically creates POD documentation
-
-=item L<Dist::Zilla::Plugin::PortabilityTests|Dist::Zilla::Plugin::PortabilityTests>
-
-Ensures your filenames will work cross-platform
-
-=item L<Dist::Zilla::Plugin::Prepender|Dist::Zilla::Plugin::Prepender>
-
-Adds a header to all your files (usefull small readme)
-
-=item L<Dist::Zilla::Plugin::ReadmeFromPod|Dist::Zilla::Plugin::ReadmeFromPod>
-
-Creates a README file from the POD documentation
-
-=item L<Dist::Zilla::Plugin::ReportVersions|Dist::Zilla::Plugin::ReportVersions>
-
-List all the version of modules you're using
-
-=item L<Dist::Zilla::Plugin::Repository|Dist::Zilla::Plugin::Repository>
-
-List github repo in perldoc
-
-=item L<Dist::Zilla::Plugin::SynopsisTests|Dist::Zilla::Plugin::SynopsisTests>
-
-Makes sure the code in your SYNOPSIS passes a syntax check
-
-=item L<Dist::Zilla::Plugin::UnusedVarsTests|Dist::Zilla::Plugin::UnusedVarsTests>
-
-Checks your program for any unused variables (probably a bug?)
-
 =item L<Dist::Zilla::PluginBundle::Author::LESPEA|Dist::Zilla::PluginBundle::Author::LESPEA>
 
 My dzil config
-
-=item L<Perl::MinimumVersion|Perl::MinimumVersion>
-
-Helper module for dzil plugin
-
-=item L<Perl::PrereqScanner|Perl::PrereqScanner>
-
-Helper module for dzil plugin
-
-=item L<Pod::Coverage::TrustPod|Pod::Coverage::TrustPod>
-
-Helper module for dzil plugin
-
-=item L<Pod::Elemental::Transformer::List|Pod::Elemental::Transformer::List>
-
-Helper module for dzil plugin
-
-=item L<Pod::Weaver|Pod::Weaver>
-
-Helper module for dzil plugin
-
-=item L<Pod::Weaver::Section::Support|Pod::Weaver::Section::Support>
-
-Helper module for dzil plugin
-
-=item L<Test::CPAN::Meta|Test::CPAN::Meta>
-
-Helper module for dzil plugin
 
 =back
 
@@ -467,17 +355,23 @@ in addition to those websites please use your favorite search engine to discover
 
 Search CPAN
 
+The default CPAN search engine, useful to view POD in HTML format.
+
 L<http://search.cpan.org/dist/Task-BeLike-LESPEA>
 
 =item *
 
 RT: CPAN's Bug Tracker
 
+The RT ( Request Tracker ) website is the default bug/issue tracking system for CPAN.
+
 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Task-BeLike-LESPEA>
 
 =item *
 
-AnnoCPAN: Annotated CPAN documentation
+AnnoCPAN
+
+The AnnoCPAN is a website that allows community annonations of Perl module documentation.
 
 L<http://annocpan.org/dist/Task-BeLike-LESPEA>
 
@@ -485,31 +379,49 @@ L<http://annocpan.org/dist/Task-BeLike-LESPEA>
 
 CPAN Ratings
 
+The CPAN Ratings is a website that allows community ratings and reviews of Perl modules.
+
 L<http://cpanratings.perl.org/d/Task-BeLike-LESPEA>
 
 =item *
 
 CPAN Forum
 
+The CPAN Forum is a web forum for discussing Perl modules.
+
 L<http://cpanforum.com/dist/Task-BeLike-LESPEA>
 
 =item *
 
-CPANTS Kwalitee
+CPANTS
+
+The CPANTS is a website that analyzes the Kwalitee ( code metrics ) of a distribution.
 
 L<http://cpants.perl.org/dist/overview/Task-BeLike-LESPEA>
 
 =item *
 
-CPAN Testers Results
+CPAN Testers
 
-L<http://cpantesters.org/distro/T/Task-BeLike-LESPEA.html>
+The CPAN Testers is a network of smokers who run automated tests on uploaded CPAN distributions.
+
+L<http://www.cpantesters.org/distro/T/Task-BeLike-LESPEA>
 
 =item *
 
 CPAN Testers Matrix
 
+The CPAN Testers Matrix is a website that provides a visual way to determine what Perls/platforms PASSed for a distribution.
+
 L<http://matrix.cpantesters.org/?dist=Task-BeLike-LESPEA>
+
+=item *
+
+CPAN Testers Dependencies
+
+The CPAN Testers Dependencies is a website that shows a chart of the test results of all dependencies for a distribution.
+
+L<http://deps.cpantesters.org/?module=Task::BeLike::LESPEA>
 
 =back
 
@@ -531,7 +443,7 @@ L<https://github.com/lespea/task-belike-lespea>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Adam Lesperance.
+This software is copyright (c) 2011 by Adam Lesperance.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

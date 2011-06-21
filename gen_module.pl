@@ -8,7 +8,13 @@ use File::Spec;
 use constant  PATH_Mod  => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
 use constant  PATH_Dist => 'dist.ini';
 use constant  BAT_FILE  => 'ppm_install.bat';
-use constant  VERSION   => '2.000000';
+use constant  VERSION   => '2.001000';
+
+
+#  Versions we care about
+my $version_override = {
+    'Dist::Zilla::PluginBundle::Author::LESPEA' => 1.00300
+};
 
 
 #  Setup modules
@@ -45,36 +51,6 @@ my $pod_section = {
 
     'Dist::Zilla' => {
         'Dist::Zilla'                                 => q{Basic module},
-        #'Dist::Zilla::App::Command::cover'            => q{Test your test coverage with Devel::Cover},
-        'Dist::Zilla::Plugin::Authority'              => q{Adds an authority context to the version},
-        'Dist::Zilla::Plugin::Bugtracker'             => q{Adds all the CPAN links to perldoc},
-        'Dist::Zilla::Plugin::CheckChangeLog'         => q{Make sure the changes file is up-to-date},
-        'Dist::Zilla::Plugin::CheckChangesHasContent' => q{Make sure the changes file actually has content},
-        'Dist::Zilla::Plugin::CheckChangesTests'      => q{Make sure you're versioning properly},
-        'Dist::Zilla::Plugin::CompileTests'           => q{Ensures that the module(s) compile correctly},
-        'Dist::Zilla::Plugin::CriticTests'            => q{Checks your code for current best practices},
-        #'Dist::Zilla::Plugin::Git'                    => q{Used to check/sync with github},
-        'Dist::Zilla::Plugin::HasVersionTests'        => q{Make sure the modules have version info},
-        'Dist::Zilla::Plugin::Homepage'               => q{Adds the homepage to the distmeta info},
-        'Dist::Zilla::Plugin::InstallGuide'           => q{Create an INSTALL file based on which build system you're using},
-        'Dist::Zilla::Plugin::KwaliteeTests'          => q{General quality tests},
-        'Dist::Zilla::Plugin::MinimumPerl'            => q{Figures out which version of Perl is the minimum version required},
-        'Dist::Zilla::Plugin::MinimumVersionTests'    => q{Make sure the code works with provided versions},
-        'Dist::Zilla::Plugin::PodWeaver'              => q{Dynamically creates POD documentation},
-        'Dist::Zilla::Plugin::PortabilityTests'       => q{Ensures your filenames will work cross-platform},
-        'Dist::Zilla::Plugin::Prepender'              => q{Adds a header to all your files (usefull small readme)},
-        'Dist::Zilla::Plugin::ReadmeFromPod'          => q{Creates a README file from the POD documentation},
-        'Dist::Zilla::Plugin::ReportVersions'         => q{List all the version of modules you're using},
-        'Dist::Zilla::Plugin::Repository'             => q{List github repo in perldoc},
-        'Dist::Zilla::Plugin::SynopsisTests'          => q{Makes sure the code in your SYNOPSIS passes a syntax check},
-        'Dist::Zilla::Plugin::UnusedVarsTests'        => q{Checks your program for any unused variables (probably a bug?)},
-        'Perl::MinimumVersion'                        => q{Helper module for dzil plugin},
-        'Perl::PrereqScanner'                         => q{Helper module for dzil plugin},
-        'Pod::Coverage::TrustPod'                     => q{Helper module for dzil plugin},
-        'Pod::Elemental::Transformer::List'           => q{Helper module for dzil plugin},
-        'Pod::Weaver'                                 => q{Helper module for dzil plugin},
-        'Pod::Weaver::Section::Support'               => q{Helper module for dzil plugin},
-        'Test::CPAN::Meta'                            => q{Helper module for dzil plugin},
         'Dist::Zilla::PluginBundle::Author::LESPEA'   => q{My dzil config},
     },
 
@@ -145,9 +121,6 @@ my $pod_section = {
         'Test::Perl::Critic'             => q{Follow best practices},
         'Test::Pod'                      => q{Ensures your POD compiles ok},
         'Test::Pod::Coverage'            => q{Make sure you document all of your functions},
-        #  Just use normal Perl::Critic for now
-        #'Perl::Critic::Utils::PPIRegexp' => q{Required for Perl::Critic::Bangs},
-        #'Perl::Critic::Bangs'            => q{Extra tests that are usefull},
     },
 
 
@@ -227,7 +200,7 @@ license = Perl_5
 version = %s
 
 copyright_holder = Adam Lesperance
-copyright_year   = 2010
+copyright_year   = 2011
 
 
 [@Author::LESPEA]
@@ -281,7 +254,7 @@ __END_DIST__
 open $fh, '>', BAT_FILE;
 my $module_versions;
 for  my $module  (sort @modules) {
-    $module_versions .= sprintf( qq{%s = 0\n}, $module );
+    $module_versions .= sprintf( qq{%s = %f\n}, $module, $version_override->{$module} || 0);
     printf {$fh} "call ppm install %s\n", $module;
 }
 close $fh;

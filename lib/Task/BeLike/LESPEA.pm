@@ -53,64 +53,8 @@ Best profiler available! (by far)
 =for :list
 = L<Dist::Zilla|Dist::Zilla>
 Basic module
-= L<Dist::Zilla::Plugin::Authority|Dist::Zilla::Plugin::Authority>
-Adds an authority context to the version
-= L<Dist::Zilla::Plugin::Bugtracker|Dist::Zilla::Plugin::Bugtracker>
-Adds all the CPAN links to perldoc
-= L<Dist::Zilla::Plugin::CheckChangeLog|Dist::Zilla::Plugin::CheckChangeLog>
-Make sure the changes file is up-to-date
-= L<Dist::Zilla::Plugin::CheckChangesHasContent|Dist::Zilla::Plugin::CheckChangesHasContent>
-Make sure the changes file actually has content
-= L<Dist::Zilla::Plugin::CheckChangesTests|Dist::Zilla::Plugin::CheckChangesTests>
-Make sure you're versioning properly
-= L<Dist::Zilla::Plugin::CompileTests|Dist::Zilla::Plugin::CompileTests>
-Ensures that the module(s) compile correctly
-= L<Dist::Zilla::Plugin::CriticTests|Dist::Zilla::Plugin::CriticTests>
-Checks your code for current best practices
-= L<Dist::Zilla::Plugin::HasVersionTests|Dist::Zilla::Plugin::HasVersionTests>
-Make sure the modules have version info
-= L<Dist::Zilla::Plugin::Homepage|Dist::Zilla::Plugin::Homepage>
-Adds the homepage to the distmeta info
-= L<Dist::Zilla::Plugin::InstallGuide|Dist::Zilla::Plugin::InstallGuide>
-Create an INSTALL file based on which build system you're using
-= L<Dist::Zilla::Plugin::KwaliteeTests|Dist::Zilla::Plugin::KwaliteeTests>
-General quality tests
-= L<Dist::Zilla::Plugin::MinimumPerl|Dist::Zilla::Plugin::MinimumPerl>
-Figures out which version of Perl is the minimum version required
-= L<Dist::Zilla::Plugin::MinimumVersionTests|Dist::Zilla::Plugin::MinimumVersionTests>
-Make sure the code works with provided versions
-= L<Dist::Zilla::Plugin::PodWeaver|Dist::Zilla::Plugin::PodWeaver>
-Dynamically creates POD documentation
-= L<Dist::Zilla::Plugin::PortabilityTests|Dist::Zilla::Plugin::PortabilityTests>
-Ensures your filenames will work cross-platform
-= L<Dist::Zilla::Plugin::Prepender|Dist::Zilla::Plugin::Prepender>
-Adds a header to all your files (usefull small readme)
-= L<Dist::Zilla::Plugin::ReadmeFromPod|Dist::Zilla::Plugin::ReadmeFromPod>
-Creates a README file from the POD documentation
-= L<Dist::Zilla::Plugin::ReportVersions|Dist::Zilla::Plugin::ReportVersions>
-List all the version of modules you're using
-= L<Dist::Zilla::Plugin::Repository|Dist::Zilla::Plugin::Repository>
-List github repo in perldoc
-= L<Dist::Zilla::Plugin::SynopsisTests|Dist::Zilla::Plugin::SynopsisTests>
-Makes sure the code in your SYNOPSIS passes a syntax check
-= L<Dist::Zilla::Plugin::UnusedVarsTests|Dist::Zilla::Plugin::UnusedVarsTests>
-Checks your program for any unused variables (probably a bug?)
 = L<Dist::Zilla::PluginBundle::Author::LESPEA|Dist::Zilla::PluginBundle::Author::LESPEA>
 My dzil config
-= L<Perl::MinimumVersion|Perl::MinimumVersion>
-Helper module for dzil plugin
-= L<Perl::PrereqScanner|Perl::PrereqScanner>
-Helper module for dzil plugin
-= L<Pod::Coverage::TrustPod|Pod::Coverage::TrustPod>
-Helper module for dzil plugin
-= L<Pod::Elemental::Transformer::List|Pod::Elemental::Transformer::List>
-Helper module for dzil plugin
-= L<Pod::Weaver|Pod::Weaver>
-Helper module for dzil plugin
-= L<Pod::Weaver::Section::Support|Pod::Weaver::Section::Support>
-Helper module for dzil plugin
-= L<Test::CPAN::Meta|Test::CPAN::Meta>
-Helper module for dzil plugin
 
 =head2 Error Checking
 
