@@ -96,6 +96,7 @@ call ppm install JSON
 call ppm install JSON::Any
 call ppm install JSON::XS
 call ppm install LWP
+call ppm install LWP::Protocol::https
 call ppm install List::AllUtils
 call ppm install List::Gen
 call ppm install List::MoreUtils

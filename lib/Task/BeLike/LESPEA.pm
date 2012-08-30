@@ -229,6 +229,8 @@ Build a huge tree out of the HTML Dom
 Do some xpath lookups for an HTML tree
 = L<LWP|LWP>
 Get stuff from the internet
+= L<LWP::Protocol::https|LWP::Protocol::https>
+Connecto to https sites
 = L<PPI::HTML|PPI::HTML>
 Turn perl into a nice html page
 = L<Template|Template>
