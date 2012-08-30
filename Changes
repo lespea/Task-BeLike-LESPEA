@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    [Bugfix]
+    *   Include the modules pod heading
+    *   Add gen_module to MANIFEST.SKIP
 
 2.002000  2012-08-29 21:58:41 America/Chicago America/Chicago
     [Enhancement]

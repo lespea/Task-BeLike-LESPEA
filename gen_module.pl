@@ -9,7 +9,7 @@ use File::Spec;
 use constant  PATH_Mod  => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
 use constant  PATH_Dist => 'dist.ini';
 use constant  BAT_FILE  => 'ppm_install.bat';
-use constant  VERSION   => '2.002000';
+use constant  VERSION   => '2.002001';
 
 
 #  Versions we care about
@@ -290,6 +290,8 @@ package Task::BeLike::LESPEA;
 
 =encoding utf8
 
+=head1 Modules
+
 __END_START
 
 
@@ -331,7 +333,7 @@ $module_txt .= "=cut\n";
 #}
 
 
-my $txt = join '', ( $begin_txt, $module_txt, "1;" );
+my $txt = join '', ( $begin_txt, $module_txt, "\n1;" );
 
 open  my $fh, '>:encoding(utf8)', PATH_Mod;
 binmode $fh, ':raw';

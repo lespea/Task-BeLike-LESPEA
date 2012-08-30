@@ -8,6 +8,8 @@ package Task::BeLike::LESPEA;
 
 =encoding utf8
 
+=head1 Modules
+
 =head2 Data Parsing
 
 =for :list
@@ -435,4 +437,5 @@ Another fast module to parse YAML
 Fast C module to parse JSON
 
 =cut
+
 1;

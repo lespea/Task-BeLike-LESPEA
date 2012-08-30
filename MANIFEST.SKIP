@@ -81,3 +81,4 @@ pod2htmi.tmp
 
 # Generated nytprof file
 nytprof.out
+gen_module.pl
