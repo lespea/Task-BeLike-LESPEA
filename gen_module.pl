@@ -151,6 +151,7 @@ my $pod_section = {
         'HTML::Tree'               => q{Build a huge tree out of the HTML Dom},
         'HTML::TreeBuilder::XPath' => q{Do some xpath lookups for an HTML tree},
         'LWP'                      => q{Get stuff from the internet},
+        'LWP::Protocol::https'     => q{Connecto to https sites},
         'PPI::HTML'                => q{Turn perl into a nice html page},
         'Template'                 => q{Template module for generating files safely},
         'WWW::Mechanize'           => q{Automate website crawling},

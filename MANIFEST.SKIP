@@ -78,3 +78,6 @@ cover_db
 pm_to_blib*
 pod2htmd.tmp
 pod2htmi.tmp
+
+# Generated nytprof file
+nytprof.out
