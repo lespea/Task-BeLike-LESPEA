@@ -83,15 +83,11 @@ Convert various strings to datetime objects
 Convert various strings to datetime objects
 = L<DateTime::Format::Flexible|DateTime::Format::Flexible>
 Convert various strings to datetime objects
-= L<DateTime::Format::Flexible::lang::en|DateTime::Format::Flexible::lang::en>
-Convert various strings to datetime objects
 = L<DateTime::Format::HTTP|DateTime::Format::HTTP>
 Convert various strings to datetime objects
 = L<DateTime::Format::Human|DateTime::Format::Human>
 Convert various strings to datetime objects
 = L<DateTime::Format::Human::Duration|DateTime::Format::Human::Duration>
-Convert various strings to datetime objects
-= L<DateTime::Format::Human::Duration::Locale|DateTime::Format::Human::Duration::Locale>
 Convert various strings to datetime objects
 = L<DateTime::Format::ICal|DateTime::Format::ICal>
 Convert various strings to datetime objects

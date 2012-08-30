@@ -68,11 +68,9 @@ my $pod_section = {
         'DateTime::Format::Epoch::Unix'               => q{Convert various strings to datetime objects},
         'DateTime::Format::Excel'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::Flexible'                  => q{Convert various strings to datetime objects},
-        'DateTime::Format::Flexible::lang::en'        => q{Convert various strings to datetime objects},
         'DateTime::Format::HTTP'                      => q{Convert various strings to datetime objects},
         'DateTime::Format::Human'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::Human::Duration'           => q{Convert various strings to datetime objects},
-        'DateTime::Format::Human::Duration::Locale'   => q{Convert various strings to datetime objects},
         'DateTime::Format::ICal'                      => q{Convert various strings to datetime objects},
         'DateTime::Format::ISO8601'                   => q{Convert various strings to datetime objects},
         'DateTime::Format::MSSQL'                     => q{Convert various strings to datetime objects},
@@ -369,6 +367,10 @@ copyright_year   = 2012
 ;add_meta          = 1
 ;
 ;compile_synopsis  = 1
+
+;  Test our links since this is a task module
+[Test::Pod::No404s]
+[Test::Pod::LinkCheck]
 
 
 [Prereqs]

@@ -29,11 +29,9 @@ call ppm install DateTime::Format::Epoch::TJD
 call ppm install DateTime::Format::Epoch::Unix
 call ppm install DateTime::Format::Excel
 call ppm install DateTime::Format::Flexible
-call ppm install DateTime::Format::Flexible::lang::en
 call ppm install DateTime::Format::HTTP
 call ppm install DateTime::Format::Human
 call ppm install DateTime::Format::Human::Duration
-call ppm install DateTime::Format::Human::Duration::Locale
 call ppm install DateTime::Format::ICal
 call ppm install DateTime::Format::ISO8601
 call ppm install DateTime::Format::MSSQL
