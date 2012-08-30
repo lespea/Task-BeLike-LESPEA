@@ -191,8 +191,16 @@ Generate nice looking perl
 =for :list
 = L<Dist::Zilla|Dist::Zilla>
 Base dist module
+= L<Dist::Zilla::App::Command::cover|Dist::Zilla::App::Command::cover>
+Lets us easily check the test coverage
+= L<Dist::Zilla::App::Command::perltidy|Dist::Zilla::App::Command::perltidy>
+Lets us pretty up our code
+= L<Dist::Zilla::App::Command::shell|Dist::Zilla::App::Command::shell>
+Provides an interactive dzil shell
 = L<Dist::Zilla::PluginBundle::Author::LESPEA|Dist::Zilla::PluginBundle::Author::LESPEA>
 My dzil config
+= L<Dist::Zilla::Shell|Dist::Zilla::Shell>
+Provides an interactive dzil shell
 
 =head2 Error Checking
 
@@ -281,7 +289,7 @@ Make it easier to create objects
 Turn your object(s) into an app
 = L<MooseX::App::Cmd|MooseX::App::Cmd>
 Extend your moose object as a script
-= L<MooseX::Log:::Log4perl|MooseX::Log:::Log4perl>
+= L<MooseX::Log::Log4perl|MooseX::Log::Log4perl>
 Easy logging injector
 = L<MooseX::Method::Signatures|MooseX::Method::Signatures>
 Adds greate parameter varification to methods (with a performance price)
@@ -385,6 +393,8 @@ For those of us that can't remember which one to use
 Very good list processing helper
 = L<List::MoreUtils|List::MoreUtils>
 Provides some advanced-ish list utilities
+= L<Locale::US|Locale::US>
+Some handy locales for America
 = L<Modern::Perl|Modern::Perl>
 Turn on new features
 = L<Readonly::XS|Readonly::XS>
@@ -395,6 +405,8 @@ A ton of precompiled regular expressions
 Additional scalar helpers
 = L<Task::Weaken|Task::Weaken>
 Let us create weak objects
+= L<Text::Trim|Text::Trim>
+Enhanced trimming capabilities
 = L<autovivification|autovivification>
 Makes working with hashes easier
 = L<namespace::autoclean|namespace::autoclean>

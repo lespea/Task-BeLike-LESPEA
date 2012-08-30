@@ -126,7 +126,11 @@ my $pod_section = {
 
     'Dist::Zilla' => {
         'Dist::Zilla'                               => q{Base dist module},
+        'Dist::Zilla::App::Command::cover'          => q{Lets us easily check the test coverage},
+        'Dist::Zilla::App::Command::perltidy'       => q{Lets us pretty up our code},
+        'Dist::Zilla::App::Command::shell'          => q{Provides an interactive dzil shell},
         'Dist::Zilla::PluginBundle::Author::LESPEA' => q{My dzil config},
+        'Dist::Zilla::Shell'                        => q{Provides an interactive dzil shell},
     },
 
 
@@ -185,7 +189,7 @@ my $pod_section = {
         'MooseX::Aliases'                        => q{Make it easier to create objects},
         'MooseX::App'                            => q{Turn your object(s) into an app},
         'MooseX::App::Cmd'                       => q{Extend your moose object as a script},
-        'MooseX::Log:::Log4perl'                 => q{Easy logging injector},
+        'MooseX::Log::Log4perl'                  => q{Easy logging injector},
         'MooseX::Method::Signatures'             => q{Adds greate parameter varification to methods (with a performance price)},
         'MooseX::Singleton'                      => q{Easily create a singleton object (good for caches)},
         'MooseX::StrictConstructor'              => q{Ensure passed hash items are valid attributes},
@@ -246,12 +250,14 @@ my $pod_section = {
         'List::AllUtils'       => q{For those of us that can't remember which one to use},
         'List::Gen'            => q{Very good list processing helper},
         'List::MoreUtils'      => q{Provides some advanced-ish list utilities},
+        'Locale::US'           => q{Some handy locales for America},
         'Modern::Perl'         => q{Turn on new features},
         'namespace::autoclean' => q{Cleans up the namespace of your modules},
         'Readonly::XS'         => q{Marks variables readonly... better than constant for some things},
         'Regexp::Common'       => q{A ton of precompiled regular expressions},
         'Scalar::Util'         => q{Additional scalar helpers},
         'Task::Weaken'         => q{Let us create weak objects},
+        'Text::Trim'           => q{Enhanced trimming capabilities},
     },
 
 
@@ -297,6 +303,18 @@ for  my $section  (sort keys %$pod_section) {
     $module_txt .= "=for :list\n";
 
     for  my $module  (sort keys %$module_ref) {
+        die "Bad module name: '$module'"  unless  $module =~ qr/
+            \A
+            (?:
+                \w+
+                (?:
+                    [:]{2}
+                    (?=\w)
+                )?
+            )+
+            \z
+        /xms;
+
         my $doc = $module_ref->{ $module };
 
         $module_txt .= sprintf( qq{= L<%s|%1\$s>\n%s\n}, $module, $doc );

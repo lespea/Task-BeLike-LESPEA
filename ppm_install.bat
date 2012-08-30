@@ -74,7 +74,11 @@ call ppm install Devel::NYTProf
 call ppm install Devel::REPL
 call ppm install Devel::REPL::Plugin::DataPrinter
 call ppm install Dist::Zilla
+call ppm install Dist::Zilla::App::Command::cover
+call ppm install Dist::Zilla::App::Command::perltidy
+call ppm install Dist::Zilla::App::Command::shell
 call ppm install Dist::Zilla::PluginBundle::Author::LESPEA
+call ppm install Dist::Zilla::Shell
 call ppm install EV
 call ppm install Encode
 call ppm install Event
@@ -97,6 +101,7 @@ call ppm install LWP
 call ppm install List::AllUtils
 call ppm install List::Gen
 call ppm install List::MoreUtils
+call ppm install Locale::US
 call ppm install Math::Big
 call ppm install Math::Big::Factors
 call ppm install Modern::Perl
@@ -111,7 +116,7 @@ call ppm install Moose::Meta::Attribute::Native
 call ppm install MooseX::Aliases
 call ppm install MooseX::App
 call ppm install MooseX::App::Cmd
-call ppm install MooseX::Log:::Log4perl
+call ppm install MooseX::Log::Log4perl
 call ppm install MooseX::Method::Signatures
 call ppm install MooseX::Singleton
 call ppm install MooseX::StrictConstructor
@@ -157,6 +162,7 @@ call ppm install Test::Pod
 call ppm install Test::Pod::Coverage
 call ppm install Test::Taint
 call ppm install Text::CSV_XS
+call ppm install Text::Trim
 call ppm install Try::Tiny
 call ppm install WWW::Mechanize
 call ppm install XML::LibXML
