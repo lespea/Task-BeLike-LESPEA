@@ -1,11 +1,15 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+
+2.002000  2012-08-30 00:24:01 America/Chicago
     [Bugfix]
     *   Include the modules pod heading
     *   Add gen_module to MANIFEST.SKIP
 
-2.002000  2012-08-29 21:58:41 America/Chicago America/Chicago
+
+2.002000  2012-08-29 21:58:41 America/Chicago
     [Enhancement]
     *   Add tons of new modules
     *   Add more error checking to the module generator
