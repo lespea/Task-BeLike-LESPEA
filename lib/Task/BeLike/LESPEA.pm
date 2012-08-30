@@ -335,8 +335,6 @@ Simple pinger
 =head2 Testing
 
 =for :list
-= L<Perl::Critic|Perl::Critic>
-Follow best practices
 = L<Test::Fatal|Test::Fatal>
 Make sure something dies okay
 = L<Test::File|Test::File>

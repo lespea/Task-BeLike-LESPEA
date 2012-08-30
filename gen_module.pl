@@ -216,7 +216,6 @@ my $pod_section = {
 
 
     'Testing' => {
-        'Perl::Critic'        => q{Follow best practices},
         'Test::Fatal'         => q{Make sure something dies okay},
         'Test::File'          => q{Test a file for wanted attributes},
         'Test::LeakTrace'     => q{Don't leak memory},
@@ -290,7 +289,7 @@ __END_START
 
 
 
-my ( $module_txt, @modules );
+my ( $module_txt, %modules );
 for  my $section  (sort keys %$pod_section) {
     $module_txt .= sprintf( "=head2 %s\n\n", $section );
     my $module_ref = $pod_section->{ $section };
@@ -301,7 +300,8 @@ for  my $section  (sort keys %$pod_section) {
         my $doc = $module_ref->{ $module };
 
         $module_txt .= sprintf( qq{= L<%s|%1\$s>\n%s\n}, $module, $doc );
-        push @modules, $module;
+        die "The module $module was listed more than once!"  if  exists $modules{ $module };
+        $modules{ $module }++;
     }
 
     $module_txt .= "\n";
@@ -385,7 +385,7 @@ __END_DIST__
 
 open $fh, '>:encoding(utf8)', BAT_FILE;
 my $module_versions;
-for  my $module  (sort @modules) {
+for  my $module  (sort keys %modules) {
     $module_versions .= sprintf( qq{%s = %f\n}, $module, $version_override->{$module} || 0);
     $fh->printf( "call ppm install %s\n", $module );
 }

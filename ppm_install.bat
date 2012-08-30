@@ -136,7 +136,6 @@ call ppm install Net::Netmask
 call ppm install Net::Ping
 call ppm install PPI::HTML
 call ppm install Perl::Critic
-call ppm install Perl::Critic
 call ppm install Perl::Tidy
 call ppm install Readonly::XS
 call ppm install Regexp::Common
