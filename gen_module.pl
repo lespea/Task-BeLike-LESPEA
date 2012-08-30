@@ -394,5 +394,5 @@ close $fh;
 
 open  $fh, '>:encoding(utf8)', PATH_Dist;
 binmode $fh, ':raw';
-$fh->print( $ini_txt, VERSION, $module_versions );
+$fh->printf( $ini_txt, VERSION, $module_versions );
 close $fh;
