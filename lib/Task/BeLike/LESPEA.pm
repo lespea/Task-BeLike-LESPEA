@@ -61,23 +61,7 @@ Convert various strings to datetime objects
 Convert various strings to datetime objects
 = L<DateTime::Format::Epoch::ActiveDirectory|DateTime::Format::Epoch::ActiveDirectory>
 Convert various strings to datetime objects
-= L<DateTime::Format::Epoch::DotNet|DateTime::Format::Epoch::DotNet>
-Convert various strings to datetime objects
-= L<DateTime::Format::Epoch::JD|DateTime::Format::Epoch::JD>
-Convert various strings to datetime objects
-= L<DateTime::Format::Epoch::Lilian|DateTime::Format::Epoch::Lilian>
-Convert various strings to datetime objects
-= L<DateTime::Format::Epoch::MJD|DateTime::Format::Epoch::MJD>
-Convert various strings to datetime objects
 = L<DateTime::Format::Epoch::MacOS|DateTime::Format::Epoch::MacOS>
-Convert various strings to datetime objects
-= L<DateTime::Format::Epoch::RJD|DateTime::Format::Epoch::RJD>
-Convert various strings to datetime objects
-= L<DateTime::Format::Epoch::RataDie|DateTime::Format::Epoch::RataDie>
-Convert various strings to datetime objects
-= L<DateTime::Format::Epoch::TAI64|DateTime::Format::Epoch::TAI64>
-Convert various strings to datetime objects
-= L<DateTime::Format::Epoch::TJD|DateTime::Format::Epoch::TJD>
 Convert various strings to datetime objects
 = L<DateTime::Format::Epoch::Unix|DateTime::Format::Epoch::Unix>
 Convert various strings to datetime objects
@@ -90,8 +74,6 @@ Convert various strings to datetime objects
 = L<DateTime::Format::Human|DateTime::Format::Human>
 Convert various strings to datetime objects
 = L<DateTime::Format::Human::Duration|DateTime::Format::Human::Duration>
-Convert various strings to datetime objects
-= L<DateTime::Format::ICal|DateTime::Format::ICal>
 Convert various strings to datetime objects
 = L<DateTime::Format::ISO8601|DateTime::Format::ISO8601>
 Convert various strings to datetime objects
@@ -149,22 +131,16 @@ Convert various strings to datetime objects
 Convert various strings to datetime objects
 = L<DateTime::Format::Sybase|DateTime::Format::Sybase>
 Convert various strings to datetime objects
-= L<DateTime::Format::Variant|DateTime::Format::Variant>
-Convert various strings to datetime objects
-= L<DateTime::Format::W3CDTF|DateTime::Format::W3CDTF>
-Convert various strings to datetime objects
 = L<DateTime::Format::WindowsFileTime|DateTime::Format::WindowsFileTime>
 Convert various strings to datetime objects
-= L<DateTime::Format::XMLTV|DateTime::Format::XMLTV>
-Convert various strings to datetime objects
 = L<DateTime::Format::XSD|DateTime::Format::XSD>
-Convert various strings to datetime objects
-= L<DateTime::Format::x509|DateTime::Format::x509>
 Convert various strings to datetime objects
 
 =head2 Development
 
 =for :list
+= L<Data::Dumper::Perltidy|Data::Dumper::Perltidy>
+Some nice formatting for Data::Dumper
 = L<Data::Printer|Data::Printer>
 Very nice object printer
 = L<Devel::Cover|Devel::Cover>
@@ -339,6 +315,8 @@ Manip IP address
 Yet another IP manip tool
 = L<Net::Ping|Net::Ping>
 Simple pinger
+= L<NetAddr::MAC|NetAddr::MAC>
+Process MAC addresses
 
 =head2 Testing
 

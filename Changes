@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    *   Include a few more modules
+    *   Use the newest version of my dzil module
+    *   Remove a lot of the datetime format modules that cause havoc
 
 
 2.002000  2012-08-30 00:24:01 America/Chicago

@@ -9,12 +9,12 @@ use File::Spec;
 use constant  PATH_Mod  => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
 use constant  PATH_Dist => 'dist.ini';
 use constant  BAT_FILE  => 'ppm_install.bat';
-use constant  VERSION   => '2.002001';
+use constant  VERSION   => '2.003000';
 
 
 #  Versions we care about
 my $version_override = {
-    'Dist::Zilla::PluginBundle::Author::LESPEA' => 1.00300,
+    'Dist::Zilla::PluginBundle::Author::LESPEA' => 1.00500,
     'Modern::Perl'                              => 1.20120521,
 };
 
@@ -56,22 +56,22 @@ my $pod_section = {
         'DateTime::Format::Duration::XSD'             => q{Convert various strings to datetime objects},
         'DateTime::Format::Epoch'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::Epoch::ActiveDirectory'    => q{Convert various strings to datetime objects},
-        'DateTime::Format::Epoch::DotNet'             => q{Convert various strings to datetime objects},
-        'DateTime::Format::Epoch::JD'                 => q{Convert various strings to datetime objects},
-        'DateTime::Format::Epoch::Lilian'             => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Epoch::DotNet'             => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Epoch::JD'                 => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Epoch::Lilian'             => q{Convert various strings to datetime objects},
         'DateTime::Format::Epoch::MacOS'              => q{Convert various strings to datetime objects},
-        'DateTime::Format::Epoch::MJD'                => q{Convert various strings to datetime objects},
-        'DateTime::Format::Epoch::RataDie'            => q{Convert various strings to datetime objects},
-        'DateTime::Format::Epoch::RJD'                => q{Convert various strings to datetime objects},
-        'DateTime::Format::Epoch::TAI64'              => q{Convert various strings to datetime objects},
-        'DateTime::Format::Epoch::TJD'                => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Epoch::MJD'                => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Epoch::RataDie'            => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Epoch::RJD'                => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Epoch::TAI64'              => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Epoch::TJD'                => q{Convert various strings to datetime objects},
         'DateTime::Format::Epoch::Unix'               => q{Convert various strings to datetime objects},
         'DateTime::Format::Excel'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::Flexible'                  => q{Convert various strings to datetime objects},
         'DateTime::Format::HTTP'                      => q{Convert various strings to datetime objects},
         'DateTime::Format::Human'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::Human::Duration'           => q{Convert various strings to datetime objects},
-        'DateTime::Format::ICal'                      => q{Convert various strings to datetime objects},
+        #'DateTime::Format::ICal'                      => q{Convert various strings to datetime objects},
         'DateTime::Format::ISO8601'                   => q{Convert various strings to datetime objects},
         'DateTime::Format::MSSQL'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::MySQL'                     => q{Convert various strings to datetime objects},
@@ -100,17 +100,18 @@ my $pod_section = {
         'DateTime::Format::SQLite'                    => q{Convert various strings to datetime objects},
         'DateTime::Format::Strptime'                  => q{Convert various strings to datetime objects},
         'DateTime::Format::Sybase'                    => q{Convert various strings to datetime objects},
-        'DateTime::Format::Variant'                   => q{Convert various strings to datetime objects},
-        'DateTime::Format::W3CDTF'                    => q{Convert various strings to datetime objects},
+        #'DateTime::Format::Variant'                   => q{Convert various strings to datetime objects},
+        #'DateTime::Format::W3CDTF'                    => q{Convert various strings to datetime objects},
         'DateTime::Format::WindowsFileTime'           => q{Convert various strings to datetime objects},
-        'DateTime::Format::x509'                      => q{Convert various strings to datetime objects},
-        'DateTime::Format::XMLTV'                     => q{Convert various strings to datetime objects},
+        #'DateTime::Format::x509'                      => q{Convert various strings to datetime objects},
+        #'DateTime::Format::XMLTV'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::XSD'                       => q{Convert various strings to datetime objects},
     },
 
 
     'Development' => {
         'Data::Printer'                    => q{Very nice object printer},
+        'Data::Dumper::Perltidy'           => q{Some nice formatting for Data::Dumper},
         'Devel::Cover'                     => q{Make sure we test all our functions},
         'Devel::NYTProf'                   => q{Best profiler available! (by far)},
         'Devel::REPL'                      => q{Nicely interact with perl},
@@ -201,6 +202,7 @@ my $pod_section = {
         'MooseX::Types::IPv4'                    => q{IP Address},
         'MooseX::Types::JSON'                    => q{A JSON string},
         'MooseX::Types::NetAddr::IP'             => q{Alternative to IPv4},
+        'MooseX::Types::NetAddr::IP'             => q{Alternative to IPv4},
         'MooseX::Types::PortNumber'              => q{A valid port number},
         'MooseX::Types::Structured'              => q{Lets you write enforce structured attributes better than base Moose},
         'MooseX::Types::URI'                     => q{A valid URI address string},
@@ -215,6 +217,7 @@ my $pod_section = {
         'Net::IP'         => q{Manip IP address},
         'Net::Netmask'    => q{Yet another IP manip tool},
         'Net::Ping'       => q{Simple pinger},
+        'NetAddr::MAC'    => q{Process MAC addresses},
     },
 
 
