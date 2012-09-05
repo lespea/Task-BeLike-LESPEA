@@ -14,7 +14,7 @@ use constant  VERSION   => '2.003000';
 
 #  Versions we care about
 my $version_override = {
-    'Dist::Zilla::PluginBundle::Author::LESPEA' => 1.00500,
+    'Dist::Zilla::PluginBundle::Author::LESPEA' => 1.005001,
     'Modern::Perl'                              => 1.20120521,
 };
 
