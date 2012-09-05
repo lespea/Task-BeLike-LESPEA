@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+2.003000  2012-09-05 01:17:20 America/Chicago
     *   Include a few more modules
     *   Use the newest version of my dzil module
     *   Remove a lot of the datetime format modules that cause havoc
