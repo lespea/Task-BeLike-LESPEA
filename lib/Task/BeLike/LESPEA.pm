@@ -17,8 +17,6 @@ package Task::BeLike::LESPEA;
 Modern XLSX writer
 = L<Spreadsheet::ParseExcel|Spreadsheet::ParseExcel>
 Read Microsoft xls files
-= L<Spreadsheet::Read|Spreadsheet::Read>
-Write a wide variety of 'spreadsheets'
 = L<Spreadsheet::WriteExcel|Spreadsheet::WriteExcel>
 Write Microsoft xls files
 = L<Spreadsheet::XLSX|Spreadsheet::XLSX>

@@ -9,7 +9,7 @@ use File::Spec;
 use constant  PATH_Mod  => File::Spec->catfile( qw/ lib  Task  BeLike  LESPEA.pm / );
 use constant  PATH_Dist => 'dist.ini';
 use constant  BAT_FILE  => 'ppm_install.bat';
-use constant  VERSION   => '2.003000';
+use constant  VERSION   => '2.004000';
 
 
 #  Versions we care about
@@ -29,7 +29,7 @@ my $pod_section = {
     'Data Parsing' => {
         'Excel::Writer::XLSX'     => q{Modern XLSX writer},
         'Spreadsheet::ParseExcel' => q{Read Microsoft xls files},
-        'Spreadsheet::Read'       => q{Write a wide variety of 'spreadsheets'},
+        #'Spreadsheet::Read'       => q{Write a wide variety of 'spreadsheets'},
         'Spreadsheet::WriteExcel' => q{Write Microsoft xls files},
         'Spreadsheet::XLSX'       => q{Legacy XLSX writer},
         'Text::CSV_XS'            => q{Parse CSV files, no matter how borked up they are},

@@ -134,7 +134,6 @@ call ppm install Readonly::XS
 call ppm install Regexp::Common
 call ppm install Scalar::Util
 call ppm install Spreadsheet::ParseExcel
-call ppm install Spreadsheet::Read
 call ppm install Spreadsheet::WriteExcel
 call ppm install Spreadsheet::XLSX
 call ppm install Task::Weaken
