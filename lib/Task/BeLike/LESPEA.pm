@@ -81,8 +81,6 @@ Convert various strings to datetime objects
 Convert various strings to datetime objects
 = L<DateTime::Format::Natural|DateTime::Format::Natural>
 Convert various strings to datetime objects
-= L<DateTime::Format::Natural::Aliases|DateTime::Format::Natural::Aliases>
-Convert various strings to datetime objects
 = L<DateTime::Format::Natural::Calc|DateTime::Format::Natural::Calc>
 Convert various strings to datetime objects
 = L<DateTime::Format::Natural::Compat|DateTime::Format::Natural::Compat>

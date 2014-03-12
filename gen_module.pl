@@ -76,7 +76,6 @@ my $pod_section = {
         'DateTime::Format::MSSQL'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::MySQL'                     => q{Convert various strings to datetime objects},
         'DateTime::Format::Natural'                   => q{Convert various strings to datetime objects},
-        'DateTime::Format::Natural::Aliases'          => q{Convert various strings to datetime objects},
         'DateTime::Format::Natural::Calc'             => q{Convert various strings to datetime objects},
         'DateTime::Format::Natural::Compat'           => q{Convert various strings to datetime objects},
         'DateTime::Format::Natural::Duration'         => q{Convert various strings to datetime objects},

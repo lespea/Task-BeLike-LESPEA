@@ -29,7 +29,6 @@ call ppm install DateTime::Format::ISO8601
 call ppm install DateTime::Format::MSSQL
 call ppm install DateTime::Format::MySQL
 call ppm install DateTime::Format::Natural
-call ppm install DateTime::Format::Natural::Aliases
 call ppm install DateTime::Format::Natural::Calc
 call ppm install DateTime::Format::Natural::Compat
 call ppm install DateTime::Format::Natural::Duration
