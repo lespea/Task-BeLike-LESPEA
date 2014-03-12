@@ -2,6 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+2.005000  2014-03-12 09:47:36-05:00 America/Chicago
+
 2.004000  2013-01-24 00:54:13 America/Chicago
     *   Remove Spreadsheet::Read as it's breaking installs
 
