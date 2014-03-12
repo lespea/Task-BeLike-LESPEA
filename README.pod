@@ -6,7 +6,7 @@ Task::BeLike::LESPEA - Modules that LESPEA uses on a daily basis
 
 =head1 VERSION
 
-version 2.004000
+version 2.005000
 
 =encoding utf8
 
@@ -145,10 +145,6 @@ Convert various strings to datetime objects
 Convert various strings to datetime objects
 
 =item L<DateTime::Format::Natural|DateTime::Format::Natural>
-
-Convert various strings to datetime objects
-
-=item L<DateTime::Format::Natural::Aliases|DateTime::Format::Natural::Aliases>
 
 Convert various strings to datetime objects
 
@@ -905,7 +901,7 @@ L<https://github.com/lespea/task-belike-lespea>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Adam Lesperance.
+This software is copyright (c) 2014 by Adam Lesperance.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
@@ -933,3 +929,4 @@ FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
 SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
 DAMAGES.
 
+=cut
